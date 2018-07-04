@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="嗨，我是曹建波（@jeanboy），一名来自中国的 Android / iOS / 前端 开发者。现居北京，专注于移动应用开发，热爱分享。">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="曹建波（@jeanboy）">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Android 屏幕适配全攻略"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="嗨，我是曹建波（@jeanboy），一名来自中国的 Android / iOS / 前端 开发者。现居北京，专注于移动应用开发，热爱分享。" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Jeanboy | 曹建波"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Android 屏幕适配全攻略 - Jeanboy | 曹建波</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="Jeanboy | 曹建波">
+            <img src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg" class="dib h3" alt="Jeanboy | 曹建波">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="首页">
+                    首页
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="归档">
+                    归档
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags" 
+                    title="标签">
+                    标签
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/categories" 
+                    title="分类">
+                    分类
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/about" 
+                    title="关于我">
+                    关于我
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Android 屏幕适配全攻略</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2017-04-26</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa-file-text-o"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/Android/">#Android</a> <a class="fw3 ph1 dib" href="/tags/屏幕适配/">#屏幕适配</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="Android-屏幕适配全攻略"><a href="#Android-屏幕适配全攻略" class="headerlink" title="Android-屏幕适配全攻略"></a>Android-屏幕适配全攻略</h1><h2 id="一、Android屏幕碎片化"><a href="#一、Android屏幕碎片化" class="headerlink" title="一、Android屏幕碎片化"></a>一、Android屏幕碎片化</h2><p>由于 Android 系统的开发性，任何用户、开发者、OEM厂商、运营商都可以对 Android 进行定制，修改成他们想要的样子。各大厂商、开发者的标准不统一，所以就造成了 Android 系统碎片化。</p>
+<p>但是这种“碎片化”到底到达什么程度呢？</p>
+<p>下面这张图片所显示的内容足以充分说明当今 Android 系统碎片化问题的严重性，因为该图片中的每一个矩形都代表着一种 Android 设备。</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_screens_support/08.png?raw=true" alt="图08"></p>
+<p>而随着支持Android系统的设备(手机、平板、电视、手表)的增多，设备碎片化、品牌碎片化、系统碎片化、传感器碎片化和屏幕碎片化的程度也在不断地加深。而我们今天要探讨的，则是对我们开发影响比较大的——屏幕的碎片化。</p>
+<p>下面这张图是Android屏幕尺寸的示意图，在这张图里面，蓝色矩形的大小代表不同尺寸，颜色深浅则代表所占百分比的大小。</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_screens_support/06.png?raw=true" alt="图06"></p>
+<p>而与之相对应的，则是下面这张图。这张图显示了 IOS 设备所需要进行适配的屏幕尺寸和占比。</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_screens_support/07.png?raw=true" alt="图07"></p>
+<p>当然，这张图片只是 4, 4s, 5, 5c, 5s 和平板的尺寸，现在还应该加上新推出的 iphone6 和 plus，但是和 Android 的屏幕碎片化程度相比而言，还是差的太远。</p>
+<blockquote>
+<p>Android屏幕的碎片化如此严重，所以我们不得不进行屏幕的适配，如何面对如此多的屏幕进行适配？下面结合Google官方开发文档讨论下最优的解决方案。</p>
+</blockquote>
+<h2 id="二、术语和概念"><a href="#二、术语和概念" class="headerlink" title="二、术语和概念"></a>二、术语和概念</h2><h4 id="1-什么是屏幕尺寸、屏幕分辨率、屏幕像素密度？"><a href="#1-什么是屏幕尺寸、屏幕分辨率、屏幕像素密度？" class="headerlink" title="1. 什么是屏幕尺寸、屏幕分辨率、屏幕像素密度？"></a>1. 什么是屏幕尺寸、屏幕分辨率、屏幕像素密度？</h4><p>屏幕尺寸</p>
+<blockquote>
+<p><strong>按屏幕对角测量的实际物理尺寸。</strong>单位是英寸(inch)，1英寸 = 2.54厘米。</p>
+</blockquote>
+<p>屏幕分辨率</p>
+<blockquote>
+<p><strong>屏幕上物理像素的总数。</strong>单位是 px，1px = 1像素点，一般是纵向像素×横向像素，如1280×720。</p>
+</blockquote>
+<p>每英寸点数</p>
+<blockquote>
+<p>是指每英寸多少点。单位是 dpi，即 “dot per inch” 的缩写，是打印机、鼠标等设备分辨率的单位。</p>
+</blockquote>
+<p>屏幕像素密度</p>
+<blockquote>
+<p><strong>所表示的是每英寸所拥有的像素数量。</strong>单位是ppi，即 “Pixel per inch“ 的缩写，每英寸像素点数。<strong>针对显示器的设计时，dpi = ppi。</strong></p>
+</blockquote>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_screens_support/01.png?raw=true" alt="图01"></p>
+<blockquote>
+<p>例如：计算Nexus5的屏幕像素密度：屏幕尺寸：4.95 inch、分辨率：1920×1080，屏幕像素密度(ppi)：445</p>
+</blockquote>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_screens_support/02.png?raw=true" alt="图02"></p>
+<h4 id="2-什么是dp、dip、dpi、sp、px？之间的关系是什么？"><a href="#2-什么是dp、dip、dpi、sp、px？之间的关系是什么？" class="headerlink" title="2. 什么是dp、dip、dpi、sp、px？之间的关系是什么？"></a>2. 什么是dp、dip、dpi、sp、px？之间的关系是什么？</h4><p>dip/dp</p>
+<blockquote>
+<p>在定义 UI 布局时应使用的虚拟像素单位，用于以密度无关方式表示布局维度或位置。</p>
+<p>Density Independent Pixels(密度无关像素)的缩写。<br>以160dpi为基准，1dp = 1px。单位转换： px = dp * (dpi / 160)。</p>
+</blockquote>
+<p>dpi</p>
+<blockquote>
+<p>屏幕像素密度的单位，“dot per inch” 的缩写</p>
+</blockquote>
+<p>px</p>
+<blockquote>
+<p>像素，物理上的绝对单位</p>
+</blockquote>
+<p>sp</p>
+<blockquote>
+<p>Scale-Independent Pixels 的缩写，可以根据文字大小首选项自动进行缩放。</p>
+<p>Google推荐我们使用 12s p以上的大小，通常可以使用 12sp，14sp，18sp，22sp，最好不要使用<strong>奇数</strong>和<strong>小数</strong>。</p>
+</blockquote>
+<h4 id="3-什么是mdpi、hdpi、xdpi、xxdpi、xxxdpi？如何计算和区分？"><a href="#3-什么是mdpi、hdpi、xdpi、xxdpi、xxxdpi？如何计算和区分？" class="headerlink" title="3. 什么是mdpi、hdpi、xdpi、xxdpi、xxxdpi？如何计算和区分？"></a>3. 什么是mdpi、hdpi、xdpi、xxdpi、xxxdpi？如何计算和区分？</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">名称</th>
+<th style="text-align:left">像素密度范围</th>
+<th style="text-align:left">图片大小</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">mdpi(中)</td>
+<td style="text-align:left">120dp~160dp</td>
+<td style="text-align:left">48×48px</td>
+</tr>
+<tr>
+<td style="text-align:left">hdpi(高)</td>
+<td style="text-align:left">160dp~240dp</td>
+<td style="text-align:left">72×72px</td>
+</tr>
+<tr>
+<td style="text-align:left">xhdpi(超高)</td>
+<td style="text-align:left">240dp~320dp</td>
+<td style="text-align:left">96×96px</td>
+</tr>
+<tr>
+<td style="text-align:left">xxhdpi(超超高)</td>
+<td style="text-align:left">320dp~480dp</td>
+<td style="text-align:left">144×144px</td>
+</tr>
+<tr>
+<td style="text-align:left">xxxhdpi(超超超高)</td>
+<td style="text-align:left">480dp~640dp</td>
+<td style="text-align:left">192×192px</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_screens_support/03.png?raw=true" alt="图03"></p>
+<blockquote>
+<p>在Google官方开发文档中，说明了 mdpi：hdpi：xhdpi：xxhdpi：xxxhdpi = 2：3：4：6：8 的尺寸比例进行缩放。例如，一个图标的大小为 48×48dp，表示在mdpi上，实际大小为 48×48px，在 hdpi 像素密度上，实际尺寸为 mdpi 上的1.5倍，即 72×72px，以此类推。</p>
+</blockquote>
+<h4 id="4-支持的屏幕范围"><a href="#4-支持的屏幕范围" class="headerlink" title="4. 支持的屏幕范围"></a>4. 支持的屏幕范围</h4><p>四种通用尺寸：小、正常、 大 和超大。</p>
+<p>六种通用的密度：</p>
+<ul>
+<li>ldpi（低）~120dpi<br></li>
+<li>mdpi（中）~160dpi<br></li>
+<li>hdpi（高）~240dpi<br></li>
+<li>xhdpi（超高）~320dpi<br></li>
+<li>xxhdpi（超超高）~480dpi<br></li>
+<li>xxxhdpi（超超超高）~640dpi</li>
+</ul>
+<p>屏幕尺寸与屏幕密度对比：</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_screens_support/04.png?raw=true" alt="图04"><br></p>
+<ul>
+<li>超大屏幕至少为 960dp x 720dp<br></li>
+<li>大屏幕至少为 640dp x 480dp<br></li>
+<li>正常屏幕至少为 470dp x 320dp<br></li>
+<li>小屏幕至少为 426dp x 320dp</li>
+</ul>
+<h2 id="三、解决方案-支持各种屏幕尺寸"><a href="#三、解决方案-支持各种屏幕尺寸" class="headerlink" title="三、解决方案 - 支持各种屏幕尺寸"></a>三、解决方案 - 支持各种屏幕尺寸</h2><h4 id="1-使用配置限定符"><a href="#1-使用配置限定符" class="headerlink" title="1.  使用配置限定符"></a>1.  使用配置限定符</h4><p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_screens_support/05.jpg?raw=true" alt="图05"></p>
+<blockquote>
+<p>这里只是展示了常用的一些配置限定符，具体用法和详情请参阅：<a href="https://developer.android.com/guide/practices/screens_support.html?hl=zh-cn#qualifiers" target="_blank" rel="noopener">Google官方开发文档-使用配置限定符</a></p>
+</blockquote>
+<h4 id="2-使用NinePatch-9-图片"><a href="#2-使用NinePatch-9-图片" class="headerlink" title="2. 使用NinePatch(.9)图片"></a>2. 使用NinePatch(.9)图片</h4><p>什么是.9图？</p>
+<blockquote>
+<p>NinePatch 是一种 PNG 图像，在其中可定义当视图中的内容超出正常图像边界时 Android 缩放的可拉伸区域。 后缀以 <strong>.9.png</strong> 结尾，命名格式为：xxx.9.png。<br><br>如：普通图：ic_launcher<strong>.png</strong> <br><br>.9图 为：ic_launcher<strong>.9.png</strong> <br><br>文件位置： res/drawable/filename.9.png 文件名用作资源 ID。</p>
+</blockquote>
+<p>怎么制作.9图？</p>
+<blockquote>
+<p>使用 Photoshop（不推荐）<br><br>使用 Android SDK 自带工具，在 …\Android\SDK\tools\ 下名字为 draw9patch 的文件。<br><br>使用 Android Studio 同上。</p>
+</blockquote>
+<p>draw9patch如图 ：</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_screens_support/09.png?raw=true" alt="图09"><br><br><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_screens_support/10.png?raw=true" alt="图10"><br></p>
+<p>拉伸区域</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_screens_support/11.png?raw=true" alt="图11"><br></p>
+<blockquote>
+<p><strong>红色框区域</strong>：表示纵向拉伸的区域，也就是说，当图片需要纵向拉伸的时候它会只指定拉伸红色区域，其他区域在纵向是不会拉伸的。</p>
+<p><strong>绿色框区域</strong>：表示横向拉伸的区域，也就是说，当图片需要横向拉伸的时候它会只指定拉伸绿色区域，其他区域在横向是不会拉伸的。</p>
+<p>显然红色和绿色相交的部分是既会进行横向拉伸也会进行纵向拉伸的。</p>
+</blockquote>
+<p>前景的显示区域</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_screens_support/12.png?raw=true" alt="图12"><br></p>
+<blockquote>
+<p><strong>蓝色区域</strong>：表示前景能显示的纵向范围。即前景的最上面可以显示到什么地方，最下面可以显示的什么地方。</p>
+<p><strong>黄色区域</strong>：表示前景能显示的横向范围。即前景的最左边可以显示到什么地方，最右边可以显示的什么地方。</p>
+<p>蓝色和黄色相交部分：表示整个前景能显示的区域。一个区域是矩形的，蓝色规定了上下边界，黄色规定了左右边界，两者共同当然也就规定了一个矩形区域。</p>
+</blockquote>
+<h4 id="3-可绘制的资源文件Drawable"><a href="#3-可绘制的资源文件Drawable" class="headerlink" title="3.可绘制的资源文件Drawable"></a>3.可绘制的资源文件Drawable</h4><blockquote>
+<p>请参考：<a href="https://developer.android.com/guide/topics/resources/drawable-resource.html" target="_blank" rel="noopener">Google官方开发文档-可绘制对象资源</a></p>
+</blockquote>
+<h4 id="4-最佳做法"><a href="#4-最佳做法" class="headerlink" title="4. 最佳做法"></a>4. 最佳做法</h4><ol>
+<li>在 XML 布局文件中指定尺寸时使用 wrap_content、 match_parent 或 dp 单位 。</li>
+<li>不要在应用代码中使用硬编码的像素值 。</li>
+<li>不要使用 AbsoluteLayout（已弃用） 。</li>
+<li>为不同屏幕密度提供替代位图可绘制对象 。</li>
+</ol>
+<h4 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h4><p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_screens_support/13.png?raw=true" alt="图13"><br></p>
+<blockquote>
+<p>表格里面列出了目前主流的 Android 手机设备分辨率对应的 dpi 缩放级别。<br><br>一般设计师会以 <strong>1920 x 1080</strong> 来设计效果图，那么<strong>只需要将效果图测量出来的 px值 填入 第6行-px列</strong> 中即可自动计算出所需的 <strong>dp/sp 的值</strong>。<br><br>通常情况下以 <strong>1280 x 720</strong> 的效果图来写布局是比较好的方式，因为<strong>测量出来的 px值是 dp/sp 的两倍</strong>，方便计算。<br><br>表格下载：<a href="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/Android%E5%B1%8F%E5%B9%95%E9%80%82%E9%85%8D%E5%8D%95%E4%BD%8D%E8%BD%AC%E6%8D%A2.xls" target="_blank" rel="noopener">Android屏幕适配单位转换.xls</a></p>
+</blockquote>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://developer.android.com/guide/practices/screens_support.html?hl=zh-cn#DeclaringTabletLayouts" target="_blank" rel="noopener">https://developer.android.com/guide/practices/screens_support.html?hl=zh-cn#DeclaringTabletLayouts</a><br><br><a href="http://blog.jeswang.org/blog/2013/08/07/ppi-vs-dpi-you-shi-yao-qu-bie/" target="_blank" rel="noopener">http://blog.jeswang.org/blog/2013/08/07/ppi-vs-dpi-you-shi-yao-qu-bie/</a><br><br><a href="http://blog.csdn.net/zhaokaiqiang1992/article/details/45419023" target="_blank" rel="noopener">http://blog.csdn.net/zhaokaiqiang1992/article/details/45419023</a><br><br><a href="http://www.cnblogs.com/vanezkw/archive/2012/07/19/2599092.html" target="_blank" rel="noopener">http://www.cnblogs.com/vanezkw/archive/2012/07/19/2599092.html</a><br></p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/Android/">#Android</a> <a class="fw3 ph1 dib" href="/tags/屏幕适配/">#屏幕适配</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="https://avatars2.githubusercontent.com/u/5093954?s=460&v=4" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="曹建波（@jeanboy）">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            嗨，我是曹建波（@jeanboy），一名来自中国的 Android / iOS / 前端 开发者。
+
+现居北京，专注于移动应用开发，热爱分享。
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>分类</h3>
+    
+        <p>
+            <a href="/categories/Android/">Android</a>
+        </p>
+    
+</div>
+
+
+                        <hr class="dn-l mw4 black-50 mt5" />
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p>
+            <a href="/2017/04/26/multi-screen-support/">Android 屏幕适配全攻略</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5 bg-2">
+    <div class="mv8">
+        <div class="center tc">
+            
+                <div class="dib mh3">
+                    <a class="f3 f2-ns white dim" href="https://github.com/jeanboydev" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
+                
+                <div class="dib mh3">
+                    <a class="f3 f2-ns white dim" href="mailto:jeanboy@foxmail.com" target="_blank">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </div>
+                
+        </div>
+        <div class="f6 f5-ns center tc white pt5 fw3">
+            <a class="link dim white" href="https://github.com/jeanboydev">@Jeanboy</a> All right reserved | Design & Hexo
+        </div>
+    </div>
+</div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
