@@ -62,10 +62,22 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css">
 
-    <!-- Google Analytics -->
+    <!-- Analytics -->
     
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121861403-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-121861403-1');
+    </script>
+    
+    
+    <!-- Baidu Analytics -->
     <script>
         var _hmt = _hmt || [];
         (function () {
@@ -75,6 +87,8 @@
             s.parentNode.insertBefore(hm, s);
         })();
     </script>
+    
+
 </head>
 
 
@@ -144,19 +158,6 @@
     <div class="content">
         <div class="mw8 center">
             
-                <a href="/2017/04/30/android-life-cycle/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv3">
-        <div class="dtc v-mid w-20 black-50">
-            
-                <span class="f4 fw3 lh-copy">2017.04.30</span> 
-            
-        </div>
-        <div class="dtc v-mid w-80 black-70">
-            <span class="f4 fw3 lh-copy">Android - Activity 生命周期<span>
-        </div>
-    </div>
-</a>
-            
                 <a href="/2017/05/01/android-launch-mode-and-intent-filter/">
     <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv3">
         <div class="dtc v-mid w-20 black-50">
@@ -166,6 +167,19 @@
         </div>
         <div class="dtc v-mid w-80 black-70">
             <span class="f4 fw3 lh-copy">Android - Activity LaunchMode 启动模式 & IntentFilter 匹配规则<span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2017/04/30/android-life-cycle/">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv3">
+        <div class="dtc v-mid w-20 black-50">
+            
+                <span class="f4 fw3 lh-copy">2017.04.30</span> 
+            
+        </div>
+        <div class="dtc v-mid w-80 black-70">
+            <span class="f4 fw3 lh-copy">Android - Activity 生命周期<span>
         </div>
     </div>
 </a>
