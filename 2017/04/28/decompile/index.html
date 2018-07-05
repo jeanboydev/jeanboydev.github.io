@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="嗨，我是曹建波（@jeanboy），一名来自中国的 Android / iOS / 前端 开发者。现居北京，专注于移动应用开发，热爱分享。">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="曹建波（@jeanboy）">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Android - 反编译指南"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="嗨，我是曹建波（@jeanboy），一名来自中国的 Android / iOS / 前端 开发者。现居北京，专注于移动应用开发，热爱分享。" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Jeanboy | 曹建波"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Android - 反编译指南 - Jeanboy | 曹建波</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="Jeanboy | 曹建波">
+            <img src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg" class="dib h3" alt="Jeanboy | 曹建波">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="首页">
+                    首页
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="归档">
+                    归档
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags" 
+                    title="标签">
+                    标签
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/categories" 
+                    title="分类">
+                    分类
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/about" 
+                    title="关于我">
+                    关于我
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Android - 反编译指南</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2017-04-28</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa fa-android"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/Android/">#Android</a> <a class="fw3 ph1 dib" href="/tags/逆向/">#逆向</a> <a class="fw3 ph1 dib" href="/tags/反编译/">#反编译</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="Android-反编译指南"><a href="#Android-反编译指南" class="headerlink" title="Android - 反编译指南"></a>Android - 反编译指南</h1><h2 id="反编译源码"><a href="#反编译源码" class="headerlink" title="反编译源码"></a>反编译源码</h2><h3 id="1-使用-dex2jar"><a href="#1-使用-dex2jar" class="headerlink" title="1. 使用 dex2jar"></a>1. 使用 dex2jar</h3><p>作用：将 apk 反编译成 java 源码（classes.dex 转化成 jar 文件）</p>
+<p>dex2jar 下载：<a href="https://sourceforge.net/projects/dex2jar" target="_blank" rel="noopener">https://sourceforge.net/projects/dex2jar</a></p>
+<p>下载最新的 dex2jar 并解压</p>
+<h3 id="2-解压-apk-安装包，将-classes-dex-复制-dex2jar-目录下，执行下面命令"><a href="#2-解压-apk-安装包，将-classes-dex-复制-dex2jar-目录下，执行下面命令" class="headerlink" title="2. 解压 apk 安装包，将 classes.dex 复制 dex2jar 目录下，执行下面命令"></a>2. 解压 apk 安装包，将 classes.dex 复制 dex2jar 目录下，执行下面命令</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">d2j-dex2jar classes.dex</span><br></pre></td></tr></table></figure>
+<p>Win10 最新 PowerShell 窗口尝试下面命令：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\d2j-dex2jar.bat .\classes.dex</span><br></pre></td></tr></table></figure>
+<h3 id="3-得到-classes-dex2jar-jar-使用-jd-gui-exe-打开"><a href="#3-得到-classes-dex2jar-jar-使用-jd-gui-exe-打开" class="headerlink" title="3. 得到 classes-dex2jar.jar 使用 jd-gui.exe 打开"></a>3. 得到 classes-dex2jar.jar 使用 jd-gui.exe 打开</h3><p>作用：查看 APK 中 classes.dex 转化成出的 jar 文件，即源码文件</p>
+<p>dex2jar 下载：<a href="http://jd.benow.ca/" target="_blank" rel="noopener">http://jd.benow.ca/</a></p>
+<h2 id="反编译资源文件"><a href="#反编译资源文件" class="headerlink" title="反编译资源文件"></a>反编译资源文件</h2><h3 id="1-使用-apktool"><a href="#1-使用-apktool" class="headerlink" title="1. 使用 apktool"></a>1. 使用 apktool</h3><p>作用：资源文件获取，可以提取出图片文件和布局文件进行使用查看</p>
+<p>apktool 下载：<a href="https://bitbucket.org/iBotPeaches/apktool/downloads/" target="_blank" rel="noopener">https://bitbucket.org/iBotPeaches/apktool/downloads/</a></p>
+<p>下载最新的 apktool 并解压</p>
+<h3 id="2-将-apk-安装包复制到-apktool-目录下，执行命令"><a href="#2-将-apk-安装包复制到-apktool-目录下，执行命令" class="headerlink" title="2. 将 apk 安装包复制到 apktool 目录下，执行命令"></a>2. 将 apk 安装包复制到 apktool 目录下，执行命令</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar apktool.jar d -f xxx.apk -o res</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：apktool.bat 与 apktool.jar 文件名为 apktool</p>
+</blockquote>
+<h2 id="扫一扫关注我的公众账号"><a href="#扫一扫关注我的公众账号" class="headerlink" title="扫一扫关注我的公众账号"></a>扫一扫关注我的公众账号</h2><p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/wechat/qrcode_for_gh_26eef6f9e7c1_258.jpg?raw=true" width="256" height="256"></p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/Android/">#Android</a> <a class="fw3 ph1 dib" href="/tags/逆向/">#逆向</a> <a class="fw3 ph1 dib" href="/tags/反编译/">#反编译</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="https://avatars2.githubusercontent.com/u/5093954?s=460&v=4" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="曹建波（@jeanboy）">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            嗨，我是曹建波（@jeanboy），一名来自中国的 Android / iOS / 前端 开发者。<br/><br/>现居北京，专注于移动应用开发，热爱分享。
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>分类</h3>
+    
+        <p>
+            <a href="/categories/Android/">Android</a>
+        </p>
+    
+</div>
+
+
+                        <hr class="dn-l mw4 black-50 mt5" />
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p>
+            <a href="/2017/05/15/android-handler/">Android - Handler 消息机制</a>
+        </p>
+    
+        <p>
+            <a href="/2017/05/08/android-ipc/">Android - IPC 多进程</a>
+        </p>
+    
+        <p>
+            <a href="/2017/05/01/android-launch-mode-and-intent-filter/">Android - Activity LaunchMode 启动模式 &amp; IntentFilter </a>
+        </p>
+    
+        <p>
+            <a href="/2017/04/30/android-life-cycle/">Android - Activity 生命周期</a>
+        </p>
+    
+        <p>
+            <a href="/2017/04/28/decompile/">Android - 反编译指南</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5 bg-2">
+    <div class="mv8">
+        <div class="center tc">
+            
+                <div class="dib mh3">
+                    <a class="f3 f2-ns white dim" href="https://github.com/jeanboydev" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
+                
+                <div class="dib mh3">
+                    <a class="f3 f2-ns white dim" href="mailto:jeanboy@foxmail.com" target="_blank">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </div>
+                
+        </div>
+        <div class="f6 f5-ns center tc white pt5 fw3">
+            <a class="link dim white" href="https://github.com/jeanboydev">@Jeanboy</a> All right reserved | Design & Hexo
+        </div>
+    </div>
+</div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

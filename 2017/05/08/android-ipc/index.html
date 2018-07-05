@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="嗨，我是曹建波（@jeanboy），一名来自中国的 Android / iOS / 前端 开发者。现居北京，专注于移动应用开发，热爱分享。">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="曹建波（@jeanboy）">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Android - IPC 多进程"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="嗨，我是曹建波（@jeanboy），一名来自中国的 Android / iOS / 前端 开发者。现居北京，专注于移动应用开发，热爱分享。" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Jeanboy | 曹建波"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Android - IPC 多进程 - Jeanboy | 曹建波</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="Jeanboy | 曹建波">
+            <img src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg" class="dib h3" alt="Jeanboy | 曹建波">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="首页">
+                    首页
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="归档">
+                    归档
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags" 
+                    title="标签">
+                    标签
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/categories" 
+                    title="分类">
+                    分类
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/about" 
+                    title="关于我">
+                    关于我
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Android - IPC 多进程</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2017-05-08</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa fa-android"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/Android/">#Android</a> <a class="fw3 ph1 dib" href="/tags/IPC/">#IPC</a> <a class="fw3 ph1 dib" href="/tags/多进程/">#多进程</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="Android-IPC-多进程"><a href="#Android-IPC-多进程" class="headerlink" title="Android - IPC 多进程"></a>Android - IPC 多进程</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>IPC 即 Inter-Process Communication，含义为进程间通信或者跨进程通信，是指两个进程之间进行数据交换的过程。</p>
+<p>线程是 CPU 调度的最小单元，是一种有限的系统资源。进程一般指一个执行单元，在PC和移动设备上是指一个程序或者应用。进程与线程是包含与被包含的关系。一个进程可以包含多个线程。最简单的情况下一个进程只有一个线程，即主线程（例如 Android 的 UI 线程）。</p>
+<p>任何操作系统都需要有相应的 IPC 机制。在 Android 中，IPC 的使用场景大概有以下：</p>
+<ol>
+<li>有些模块由于特殊原因需要运行在单独的进程中。</li>
+<li>通过多进程来获取多份内存空间。</li>
+<li>当前应用需要向其他应用获取数据。</li>
+</ol>
+<h2 id="1-开启多进程模式"><a href="#1-开启多进程模式" class="headerlink" title="1. 开启多进程模式"></a>1. 开启多进程模式</h2><p>给四大组件在Manifest中指定 android:process 属性。这个属性的值就是进程名。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;service</span><br><span class="line">    android:name=<span class="string">".service.RemoteService"</span></span><br><span class="line">    android:process=<span class="string">":remote"</span>&gt;</span><br><span class="line">&lt;/service&gt;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>tips：使用 adb shell ps 或 adb shell ps|grep 包名 查看当前所存在的进程信息。</p>
+</blockquote>
+<h2 id="2-多线程模式的运行机制"><a href="#2-多线程模式的运行机制" class="headerlink" title="2. 多线程模式的运行机制"></a>2. 多线程模式的运行机制</h2><p>Android 为每个进程都分配了一个独立的虚拟机，不同虚拟机在内存分配上有不同的地址空间，导致不同的虚拟机访问同一个类的对象会产生多份副本。例如不同进程的 Activity 对静态变量的修改，对其他进程不会造成任何影响。所有运行在不同进程的四大组件，只要它们之间需要通过内存在共享数据，都会共享失败。四大组件之间不可能不通过中间层来共享数据。</p>
+<p>多进程会带来以下问题：</p>
+<ol>
+<li>静态成员和单例模式完全失效。</li>
+<li>线程同步锁机制完全失效。这两点都是因为不同进程不在同一个内存空间下，锁的对象也不是同一个对象。</li>
+<li>SharedPreferences 的可靠性下降。SharedPreferences 底层是 通过读/写 XML 文件实现的，并发读/写会导致一定几率的数据丢失。</li>
+<li>Application 会多次创建。</li>
+</ol>
+<p>由于系统创建新的进程的同时分配独立虚拟机，其实这就是启动一个应用的过程。在多进程模式中，不同进程的组件拥有独立的虚拟机、Application以及内存空间。实现跨进程的方式有很多：</p>
+<ol>
+<li>Intent传递数据。</li>
+<li>共享文件和SharedPreferences。</li>
+<li>基于Binder的Messenger和AIDL。</li>
+<li>Socket。</li>
+</ol>
+<h2 id="3-Binder"><a href="#3-Binder" class="headerlink" title="3. Binder"></a>3. Binder</h2><p>Android 中进程间通讯的核心就是 Binder 机制，强烈建议了解一下 Binder 机制。</p>
+<p><a href="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/android/Android-Binder进程间通讯.md" target="_blank" rel="noopener">Android Binder 进程间通讯</a></p>
+<h2 id="4-Android-中的-IPC-方式"><a href="#4-Android-中的-IPC-方式" class="headerlink" title="4. Android 中的 IPC 方式"></a>4. Android 中的 IPC 方式</h2><p>主要有以下方式：</p>
+<ol>
+<li>Intent 中附加 extras 来传递消息</li>
+<li>共享文件</li>
+<li>Binder 方式</li>
+<li>四大组件之一的 ContentProvider</li>
+<li>Socket</li>
+</ol>
+<h3 id="1-使用Bundle"><a href="#1-使用Bundle" class="headerlink" title="1. 使用Bundle"></a>1. 使用Bundle</h3><p>四大组件中的三大组件（Activity、Service、Receiver）都支持在 Intent 中传递 Bundle 数据。Bundle 实现了 Parcelable 接口，**当我们在一个进程中启动了另一个进程的 Activity、Service、Receiver，可以再 Bundle 中附加我们需要传输给远程进程的消息并通过 Intent 发送出去。被传输的数据必须能够被序列化。</p>
+<h3 id="2-使用文件共享"><a href="#2-使用文件共享" class="headerlink" title="2. 使用文件共享"></a>2. 使用文件共享</h3><p>一些概念：</p>
+<ol>
+<li><p>两个进程通过读写同一个文件来交换数据。还可以通过 ObjectOutputStream / ObjectInputStream 序列化一个对象到文件中，或者在另一个进程从文件中反序列这个对象。</p>
+<blockquote>
+<p>注意：反序列化得到的对象只是内容上和序列化之前的对象一样，本质是两个对象。</p>
+</blockquote>
+</li>
+<li>文件并发读写会导致读出的对象可能不是最新的，并发写的话那就更严重了。所以文件共享方式适合对数据同步要求不高的进程之间进行通信，并且要妥善处理并发读写问题。</li>
+<li>SharedPreferences 底层实现采用XML文件来存储键值对。系统对它的读/写有一定的缓存策略，即在内存中会有一份 SharedPreferences 文件的缓存，因此在多进程模式下，系统对它的读/写变得不可靠，面对高并发读/写时 SharedPreferences 有很大几率丢失数据，因此不建议在IPC中使用 SharedPreferences 。</li>
+</ol>
+<h3 id="3-使用Messenger"><a href="#3-使用Messenger" class="headerlink" title="3. 使用Messenger"></a>3. 使用Messenger</h3><p>Messenger 可以在不同进程间传递 Message 对象。是一种轻量级的 IPC 方案，底层实现是 AIDL。</p>
+<p>具体使用时，分为服务端和客户端：</p>
+<ol>
+<li><p>服务端：创建一个 Service 来处理客户端请求，同时创建一个 Handler 并通过它来创建一个Messenger，然后再 Service 的 onBind 中返回 Messenger 对象底层的 Binder 即可。</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> Messenger mMessenger = <span class="keyword">new</span> Messenger (<span class="keyword">new</span> xxxHandler());</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>客户端：绑定服务端的 Sevice，利用服务端返回的 IBinder 对象来创建一个 Messenger，通过这个 Messenger 就可以向服务端发送消息了，消息类型是 Message 。如果需要服务端响应，则需要创建一个Handler并通过它来创建一个 Messenger（和服务端一样），并通过 Message 的 replyTo 参数传递给服务端。服务端通过 Message 的 replyTo 参数就可以回应客户端了。</p>
+</li>
+<li>总而言之，就是客户端和服务端 拿到对方的 Messenger 来发送 Message 。只不过客户端通过 bindService 而服务端通过 message.replyTo 来获得对方的Messenger。</li>
+<li>Messenger中有一个 Hanlder 以串行的方式处理队列中的消息。不存在并发执行，因此我们不用考虑线程同步的问题。</li>
+</ol>
+<h3 id="4-使用AIDL"><a href="#4-使用AIDL" class="headerlink" title="4. 使用AIDL"></a>4. 使用AIDL</h3><p>如果有大量的并发请求，使用 Messenger 就不太适合，同时如果需要跨进程调用服务端的方法，Messenger 就无法做到了。这时我们可以使用AIDL。</p>
+<p>流程如下：</p>
+<ol>
+<li>服务端需要创建 Service来监听客户端请求，然后创建一个 AIDL 文件，将暴露给客户端的接口在AIDL文件中声明，最后在Service中实现这个AIDL接口即可。</li>
+<li>客户端首先绑定服务端的 Service，绑定成功后，将服务端返回的 Binder 对象转成 AIDL 接口所属的类型，接着就可以调用 AIDL 中的方法了。</li>
+</ol>
+<p>注意事项：</p>
+<ol>
+<li>AIDL 支持的数据类型：</li>
+</ol>
+<ul>
+<li>基本数据类型、String、CharSequence</li>
+<li>List：只支持 ArrayList，里面的每个元素必须被AIDL支持</li>
+<li>Map：只支持 HashMap，里面的每个元素必须被AIDL支持</li>
+<li>Parcelable</li>
+<li>所有的AIDL接口本身也可以在AIDL文件中使用</li>
+</ul>
+<ol start="2">
+<li>自定义的 Parcelable 对象和 AIDL 对象，不管它们与当前的 AIDL 文件是否位于同一个包，都必须显式 import 进来。</li>
+<li><p>如果 AIDL 文件中使用了自定义的 Parcelable 对象，就必须新建一个和它同名的 AIDL 文件，并在其中声明它为 Parcelable 类型。</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ryg.chapter_2.aidl;</span><br><span class="line">parcelable Book;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>AIDL接口中的参数除了基本类型以外都必须表明方向in/out。AIDL接口文件中只支持方法，不支持声明静态常量。建议把所有和AIDL相关的类和文件放在同一个包中，方便管理。</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">addBook</span><span class="params">(in Book book)</span></span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>AIDL方法是在服务端的Binder线程池中执行的，因此当多个客户端同时连接时，管理数据的集合直接采用 CopyOnWriteArrayList 来进行自动线程同步。类似的还有 ConcurrentHashMap 。</p>
+</li>
+<li>因为客户端的 listener 和服务端的 listener 不是同一个对象，所以 RecmoteCallbackList 是系统专门提供用于删除跨进程 listener 的接口，支持管理任意的 AIDL 接口，因为所有 AIDL 接口都继承自 IInterface 接口。 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RemoteCallbackList</span>&lt;<span class="title">E</span> <span class="keyword">extends</span> <span class="title">IInterface</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>它内部通过一个Map接口来保存所有的 AIDL 回调，这个Map的key是 IBinder 类型，value是 Callback 类型。当客户端解除注册时，遍历服务端所有listener，找到和客户端 listener 具有相同 Binder 对象的服务端 listenr 并把它删掉。</p>
+<ol start="7">
+<li>客户端 RPC 的时候线程会被挂起，由于被调用的方法运行在服务端的 Binder 线程池中，可能很耗时，不能在主线程中去调用服务端的方法。</li>
+</ol>
+<h3 id="5-使用ContentProvider"><a href="#5-使用ContentProvider" class="headerlink" title="5. 使用ContentProvider"></a>5. 使用ContentProvider</h3><ol>
+<li>ContentProvider 是四大组件之一，其底层实现和 Messenger 一样是 Binder。ContentProvider 天生就是用来进程间通信，只需要实现一个自定义或者系统预设置的 ContentProvider，通过 ContentResolver 的 query、update、insert 和 delete 方法即可。</li>
+<li>创建 ContentProvider，只需继承 ContentProvider 实现 onCreate 、 query 、 update 、 insert 、 getType 六个抽象方法即可。除了 onCreate 由系统回调并运行在主线程，其他五个方法都由外界调用并运行在Binder线程池中。</li>
+</ol>
+<h3 id="6-使用Socket"><a href="#6-使用Socket" class="headerlink" title="6. 使用Socket"></a>6. 使用Socket</h3><p>Socket 可以实现计算机网络中的两个进程间的通信，当然也可以在本地实现进程间的通信。服务端 Service 监听本地端口，客户端连接指定的端口，建立连接成功后，拿到 Socket 对象就可以向服务端发送消息或者接受服务端发送的消息。</p>
+<h2 id="5-具体实现"><a href="#5-具体实现" class="headerlink" title="5. 具体实现"></a>5. 具体实现</h2><p>参考代码：</p>
+<p><a href="https://github.com/jeanboydev/Android-AIDLTest" target="_blank" rel="noopener">https://github.com/jeanboydev/Android-AIDLTest</a></p>
+<h2 id="扫一扫关注我的公众账号"><a href="#扫一扫关注我的公众账号" class="headerlink" title="扫一扫关注我的公众账号"></a>扫一扫关注我的公众账号</h2><p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/wechat/qrcode_for_gh_26eef6f9e7c1_258.jpg?raw=true" width="256" height="256"></p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/Android/">#Android</a> <a class="fw3 ph1 dib" href="/tags/IPC/">#IPC</a> <a class="fw3 ph1 dib" href="/tags/多进程/">#多进程</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="https://avatars2.githubusercontent.com/u/5093954?s=460&v=4" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="曹建波（@jeanboy）">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            嗨，我是曹建波（@jeanboy），一名来自中国的 Android / iOS / 前端 开发者。<br/><br/>现居北京，专注于移动应用开发，热爱分享。
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>分类</h3>
+    
+        <p>
+            <a href="/categories/Android/">Android</a>
+        </p>
+    
+</div>
+
+
+                        <hr class="dn-l mw4 black-50 mt5" />
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p>
+            <a href="/2017/05/15/android-handler/">Android - Handler 消息机制</a>
+        </p>
+    
+        <p>
+            <a href="/2017/05/08/android-ipc/">Android - IPC 多进程</a>
+        </p>
+    
+        <p>
+            <a href="/2017/05/01/android-launch-mode-and-intent-filter/">Android - Activity LaunchMode 启动模式 &amp; IntentFilter </a>
+        </p>
+    
+        <p>
+            <a href="/2017/04/30/android-life-cycle/">Android - Activity 生命周期</a>
+        </p>
+    
+        <p>
+            <a href="/2017/04/28/decompile/">Android - 反编译指南</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5 bg-2">
+    <div class="mv8">
+        <div class="center tc">
+            
+                <div class="dib mh3">
+                    <a class="f3 f2-ns white dim" href="https://github.com/jeanboydev" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
+                
+                <div class="dib mh3">
+                    <a class="f3 f2-ns white dim" href="mailto:jeanboy@foxmail.com" target="_blank">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </div>
+                
+        </div>
+        <div class="f6 f5-ns center tc white pt5 fw3">
+            <a class="link dim white" href="https://github.com/jeanboydev">@Jeanboy</a> All right reserved | Design & Hexo
+        </div>
+    </div>
+</div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

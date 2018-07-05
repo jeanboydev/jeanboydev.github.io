@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="嗨，我是曹建波（@jeanboy），一名来自中国的 Android / iOS / 前端 开发者。现居北京，专注于移动应用开发，热爱分享。">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="曹建波（@jeanboy）">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Android - Activity 生命周期"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="嗨，我是曹建波（@jeanboy），一名来自中国的 Android / iOS / 前端 开发者。现居北京，专注于移动应用开发，热爱分享。" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Jeanboy | 曹建波"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Android - Activity 生命周期 - Jeanboy | 曹建波</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="Jeanboy | 曹建波">
+            <img src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg" class="dib h3" alt="Jeanboy | 曹建波">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="首页">
+                    首页
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="归档">
+                    归档
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags" 
+                    title="标签">
+                    标签
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/categories" 
+                    title="分类">
+                    分类
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/about" 
+                    title="关于我">
+                    关于我
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Android - Activity 生命周期</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2017-04-30</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa fa-android"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/Android/">#Android</a> <a class="fw3 ph1 dib" href="/tags/Activity/">#Activity</a> <a class="fw3 ph1 dib" href="/tags/LifeCycle/">#LifeCycle</a> <a class="fw3 ph1 dib" href="/tags/生命周期/">#生命周期</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="Android-Activity-生命周期"><a href="#Android-Activity-生命周期" class="headerlink" title="Android - Activity 生命周期"></a>Android - Activity 生命周期</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>作为四大组件中我们使用最频繁的 Activity，它的生命周期大家都了解。 然而面试中经常问到可见它的重要性。下面从两个方面来分析一下 Activity 的生命周期和一些需要注意的细节。</p>
+<p>Activity 生命周期图</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_activity_life_cycle/Android-Activity%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png?raw=true" alt="图1"></p>
+<h2 id="典型情况下生命周期分析"><a href="#典型情况下生命周期分析" class="headerlink" title="典型情况下生命周期分析"></a>典型情况下生命周期分析</h2><ol>
+<li><p>一般情况下，当当前 Activity 从<strong>不可见</strong>重新变为<strong>可见</strong>状态时，<strong>onRestart</strong> 方法就会被调用。</p>
+</li>
+<li><p>当用户打开<strong>新的 Activity</strong> 或者<strong>切换到桌面</strong>的时候，回调如下：<strong>onPause</strong> -&gt; <strong>onStop</strong>，但是如果新Activity采用了<strong>透明主题</strong>，那么 <strong>onStop</strong> 方法不会被回调。<br>当用户<strong>再次回到原来的 Activity</strong> 时，回调如下：<strong>onRestart</strong> -&gt; <strong>onStart</strong> -&gt; <strong>onResume</strong>。</p>
+</li>
+<li><p><strong>onStart</strong> 和 <strong>onStop</strong> 对应，它们是从 <strong>Activity 是否可见</strong>这个角度来回调的；<br><strong>onPause</strong> 和 <strong>onResume</strong> 方法对应，它们是从 <strong>Activity 是否位于前台</strong>这个角度来回调的。</p>
+</li>
+<li><p>从 Activity A 进入到 Activity B ，回调顺序是 onPause(A) -&gt; onCreate(B) -&gt; onStart(B) -&gt; onResume(B) -&gt; onStop(A)，所以不能在 onPause 方法中做重量级的操作。</p>
+</li>
+</ol>
+<h2 id="异常情况下生命周期分析"><a href="#异常情况下生命周期分析" class="headerlink" title="异常情况下生命周期分析"></a>异常情况下生命周期分析</h2><ol>
+<li><p><strong>onSaveInstanceState</strong> 方法只会出现在 <strong>Activity 被异常终止</strong>的情况下，它的调用时机是在 onStop 之前，它和 onPause 方法没有既定的时序关系，可能在它之前，也可能在它之后。 当 Activity 被重新创建的时候，<strong>onRestoreInstanceState</strong> 会被回调，它的调用时机是 onStart 之后。<br><br>系统只会在 Activity 即将被销毁并且有机会重新显示的情况下才会去调用 onSaveInstanceState 方法。 <br>当 Activity 在异常情况下需要重新创建时，系统会默认为我们保存当前 Activity 的视图结构，并且在 Activity 重启后为我们恢复这些数据。 </p>
+<blockquote>
+<p>比如：文本框中用户输入的数据、 listview 滚动的位置等，这些 view 相关的状态系统都会默认为我们恢复。 </p>
+</blockquote>
+<p>具体针对某一个 view 系统能为我们恢复哪些数据可以查看 view 的源码中的 onSaveInstanceState 和 onRestoreInstanceState 方法。</p>
+</li>
+<li><p>Activity按优先级的分类</p>
+<p> 前台 Activity &gt; 可见但非前台 Activity &gt; 后台 Activity</p>
+</li>
+<li><p>android:configChanges=”xxx” 属性，常用的主要有下面三个选项：</p>
+<blockquote>
+<p>local：设备的本地位置发生了变化，一般指切换了系统语言；</p>
+<p>keyboardHidden：键盘的可访问性发生了变化，比如用户调出了键盘；</p>
+<p>orientation：屏幕方向发生了变化，比如旋转了手机屏幕。</p>
+</blockquote>
+<p> 配置了 android:<strong>configChanges</strong>=”xxx” 属性之后，Activity就不会在对应变化发生时重新创建，而是调用 Activity 的 <strong>onConfigurationChanged</strong> 方法。</p>
+</li>
+</ol>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://developer.android.com/guide/components/activities.html?hl=zh-cn#Lifecycle" target="_blank" rel="noopener">Google官方开发文档-Activity</a><br><br>《Android 开发艺术探索》</p>
+<h2 id="扫一扫关注我的公众账号"><a href="#扫一扫关注我的公众账号" class="headerlink" title="扫一扫关注我的公众账号"></a>扫一扫关注我的公众账号</h2><p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/wechat/qrcode_for_gh_26eef6f9e7c1_258.jpg?raw=true" width="256" height="256"></p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/Android/">#Android</a> <a class="fw3 ph1 dib" href="/tags/Activity/">#Activity</a> <a class="fw3 ph1 dib" href="/tags/LifeCycle/">#LifeCycle</a> <a class="fw3 ph1 dib" href="/tags/生命周期/">#生命周期</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="https://avatars2.githubusercontent.com/u/5093954?s=460&v=4" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="曹建波（@jeanboy）">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            嗨，我是曹建波（@jeanboy），一名来自中国的 Android / iOS / 前端 开发者。<br/><br/>现居北京，专注于移动应用开发，热爱分享。
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>分类</h3>
+    
+        <p>
+            <a href="/categories/Android/">Android</a>
+        </p>
+    
+</div>
+
+
+                        <hr class="dn-l mw4 black-50 mt5" />
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p>
+            <a href="/2017/05/15/android-handler/">Android - Handler 消息机制</a>
+        </p>
+    
+        <p>
+            <a href="/2017/05/08/android-ipc/">Android - IPC 多进程</a>
+        </p>
+    
+        <p>
+            <a href="/2017/05/01/android-launch-mode-and-intent-filter/">Android - Activity LaunchMode 启动模式 &amp; IntentFilter </a>
+        </p>
+    
+        <p>
+            <a href="/2017/04/30/android-life-cycle/">Android - Activity 生命周期</a>
+        </p>
+    
+        <p>
+            <a href="/2017/04/28/decompile/">Android - 反编译指南</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5 bg-2">
+    <div class="mv8">
+        <div class="center tc">
+            
+                <div class="dib mh3">
+                    <a class="f3 f2-ns white dim" href="https://github.com/jeanboydev" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
+                
+                <div class="dib mh3">
+                    <a class="f3 f2-ns white dim" href="mailto:jeanboy@foxmail.com" target="_blank">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </div>
+                
+        </div>
+        <div class="f6 f5-ns center tc white pt5 fw3">
+            <a class="link dim white" href="https://github.com/jeanboydev">@Jeanboy</a> All right reserved | Design & Hexo
+        </div>
+    </div>
+</div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
