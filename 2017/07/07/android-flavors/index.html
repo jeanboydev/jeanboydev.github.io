@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="嗨，我是曹建波（@jeanboy），一名来自中国的 Android / iOS / 前端 开发者。现居北京，专注于移动应用开发，热爱分享。">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="曹建波（@jeanboy）">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Android - 多渠道打包最佳实践"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="嗨，我是曹建波（@jeanboy），一名来自中国的 Android / iOS / 前端 开发者。现居北京，专注于移动应用开发，热爱分享。" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Jeanboy | 曹建波"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Android - 多渠道打包最佳实践 - Jeanboy | 曹建波</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Analytics -->
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121861403-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-121861403-1');
+    </script>
+    
+    
+    <!-- Baidu Analytics -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?63e553d8293bc74f1160b044738c6107";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    
+    <!-- google-site-verification -->
+    <meta name="google-site-verification" content="R8TtKySmf9yNtEuFKXO0c3YwtVbtTjJU6jWQrzlsxDM" />
+    <!-- baidu-site-verification -->
+    <meta name="baidu-site-verification" content="T8pesQWGrJ" />
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="Jeanboy | 曹建波">
+            <img src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg" class="dib h3" alt="Jeanboy | 曹建波">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="首页">
+                    首页
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="归档">
+                    归档
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags" 
+                    title="标签">
+                    标签
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/categories" 
+                    title="分类">
+                    分类
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/about" 
+                    title="关于我">
+                    关于我
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Android - 多渠道打包最佳实践</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2017-07-07</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa fa-android"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/Android/">#Android</a> <a class="fw3 ph1 dib" href="/tags/Flavors/">#Flavors</a> <a class="fw3 ph1 dib" href="/tags/多渠道/">#多渠道</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="Android-Flavors"><a href="#Android-Flavors" class="headerlink" title="Android - Flavors"></a>Android - Flavors</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>该项目演示了在 Android Studio 中使用 gradle 构建渠道包。已更新支持 Android Studio 3.x，Gradle 4.x。</p>
+<h2 id="渠道号"><a href="#渠道号" class="headerlink" title="渠道号"></a>渠道号</h2><p>以友盟 SDK 为例，打包多渠道：GooglePlay，小米，友盟，360，豌豆荚，应用宝。 在 AndroidManifest.xml 中加入渠道区分标识。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta-data</span> </span></span><br><span class="line"><span class="tag">    <span class="attr">android:name</span>=<span class="string">"UMENG_CHANNEL"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:value</span>=<span class="string">"$&#123;UMENG_CHANNEL_VALUE&#125;"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p>然后在 build.gradle(Module: app) 中加入渠道打包替换对应的 UMENG_CHANNEL_VALUE 代码。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 渠道Flavors，配置不同的渠道</span></span><br><span class="line">productFlavors &#123;</span><br><span class="line">    GooglePlay &#123;&#125;</span><br><span class="line">    xiaomi &#123;&#125;</span><br><span class="line">    umeng &#123;&#125;</span><br><span class="line">    qihu360 &#123;&#125;</span><br><span class="line">    wandoujia &#123;&#125;</span><br><span class="line">    yingyongbao &#123;&#125;</span><br><span class="line">    <span class="comment">//其他...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 批量配置渠道</span></span><br><span class="line">productFlavors.all &#123;</span><br><span class="line">    flavor -&gt; flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="自定义-apk-名字"><a href="#自定义-apk-名字" class="headerlink" title="自定义 apk 名字"></a>自定义 apk 名字</h2><p>我们可以指定不同渠道号生成的 apk 的名字，这样方便打包出来区别哪个 apk 是对应哪个渠道的。</p>
+<p>如下命名格式为：<strong>渠道名-v版本号-打包时间.apk</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//打包重命名</span></span><br><span class="line">applicationVariants.all &#123; variant -&gt;</span><br><span class="line">        <span class="keyword">if</span> (variant.buildType.name == <span class="string">"release"</span>) &#123;</span><br><span class="line">            variant.outputs.all &#123; output -&gt;</span><br><span class="line">                def fileName = output.outputFile.name</span><br><span class="line">                <span class="keyword">if</span> (fileName.endsWith(<span class="string">".apk"</span>)) &#123;</span><br><span class="line">                    def apkName = <span class="string">"$&#123;variant.productFlavors[0].name&#125;-v$&#123;variant.versionName&#125;-$&#123;releaseTime()&#125;.apk"</span>;</span><br><span class="line">                    outputFileName = apkName</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="渠道自定义"><a href="#渠道自定义" class="headerlink" title="渠道自定义"></a>渠道自定义</h2><p>不同的渠道定义不同的 applicationId, versionCode, versionName</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">flavorDimensions <span class="string">"test"</span>,<span class="string">"test1"</span>,<span class="string">"test2"</span></span><br><span class="line"><span class="comment">//定义渠道</span></span><br><span class="line">productFlavors &#123;</span><br><span class="line">    main_test &#123;</span><br><span class="line">        applicationId <span class="string">"com.jeanboy.app.flavors"</span></span><br><span class="line">        versionCode rootProject.ext.mainTestVersionCode</span><br><span class="line">        versionName rootProject.ext.mainTestVersionName</span><br><span class="line">        <span class="comment">//定义manifest中替换值，如：渠道号</span></span><br><span class="line">        resValue(<span class="string">"string"</span>, <span class="string">"test_app_id"</span>, <span class="string">"2017-8-14 12:09:35"</span>)</span><br><span class="line">        <span class="comment">//定义混淆文件</span></span><br><span class="line">        <span class="function">proguardFiles <span class="title">getDefaultProguardFile</span><span class="params">(<span class="string">'proguard-android.txt'</span>)</span>, './src/main_test/proguard-rules.pro'</span></span><br><span class="line"><span class="function">        dimension "test"</span></span><br><span class="line"><span class="function">    &#125;</span></span><br><span class="line"><span class="function">    main_test1 </span>&#123;</span><br><span class="line">        applicationId <span class="string">"com.jeanboy.app.flavorstest1"</span></span><br><span class="line">        versionCode rootProject.ext.mainTest1VersionCode</span><br><span class="line">        versionName rootProject.ext.mainTest1VersionName</span><br><span class="line">        resValue(<span class="string">"string"</span>, <span class="string">"test_app_id"</span>, <span class="string">"2017-8-14 12:09:35"</span>)</span><br><span class="line">        <span class="function">proguardFiles <span class="title">getDefaultProguardFile</span><span class="params">(<span class="string">'proguard-android.txt'</span>)</span>, './src/main_test1/proguard-rules.pro'</span></span><br><span class="line"><span class="function">        dimension "test1"</span></span><br><span class="line"><span class="function">    &#125;</span></span><br><span class="line"><span class="function">    main_test2 </span>&#123;</span><br><span class="line">        applicationId <span class="string">"com.jeanboy.app.flavorstest2"</span></span><br><span class="line">        versionCode rootProject.ext.mainTest2VersionCode</span><br><span class="line">        versionName rootProject.ext.mainTest2VersionName</span><br><span class="line">        resValue(<span class="string">"string"</span>, <span class="string">"test_app_id"</span>, <span class="string">"2017-8-14 12:09:35"</span>)</span><br><span class="line">        <span class="function">proguardFiles <span class="title">getDefaultProguardFile</span><span class="params">(<span class="string">'proguard-android.txt'</span>)</span>, './src/main_test2/proguard-rules.pro'</span></span><br><span class="line"><span class="function">        dimension "test2"</span></span><br><span class="line"><span class="function">    &#125;</span></span><br><span class="line"><span class="function">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="不同渠道不同签名文件"><a href="#不同渠道不同签名文件" class="headerlink" title="不同渠道不同签名文件"></a>不同渠道不同签名文件</h2><p>定义渠道包签名文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">signingConfigs &#123;</span><br><span class="line">    test &#123;</span><br><span class="line">        <span class="function">storeFile <span class="title">file</span><span class="params">(<span class="string">'../resources/test.jks'</span>)</span><span class="comment">//密钥文件位置</span></span></span><br><span class="line"><span class="function">        storePassword 'test123'<span class="comment">//密钥密码</span></span></span><br><span class="line"><span class="function">        keyAlias 'test'<span class="comment">//密钥别名</span></span></span><br><span class="line"><span class="function">        keyPassword 'test123'<span class="comment">//别名密码</span></span></span><br><span class="line"><span class="function">    &#125;</span></span><br><span class="line"><span class="function">    test1 </span>&#123;</span><br><span class="line">        <span class="function">storeFile <span class="title">file</span><span class="params">(<span class="string">'../resources/test1.jks'</span>)</span></span></span><br><span class="line"><span class="function">        storePassword 'test123'</span></span><br><span class="line"><span class="function">        keyAlias 'test'</span></span><br><span class="line"><span class="function">        keyPassword 'test123'</span></span><br><span class="line"><span class="function">    &#125;</span></span><br><span class="line"><span class="function">    test2 </span>&#123;</span><br><span class="line">        <span class="function">storeFile <span class="title">file</span><span class="params">(<span class="string">'../resources/test2.jks'</span>)</span></span></span><br><span class="line"><span class="function">        storePassword 'test123'</span></span><br><span class="line"><span class="function">        keyAlias 'test'</span></span><br><span class="line"><span class="function">        keyPassword 'test123'</span></span><br><span class="line"><span class="function">    &#125;</span></span><br><span class="line"><span class="function">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>指定不同渠道使用的签名文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">buildTypes &#123;</span><br><span class="line">    debug &#123;</span><br><span class="line">        minifyEnabled <span class="keyword">false</span></span><br><span class="line">        shrinkResources <span class="keyword">false</span></span><br><span class="line">        zipAlignEnabled <span class="keyword">true</span></span><br><span class="line">        versionNameSuffix <span class="string">"-debug"</span><span class="comment">//版本命名后缀</span></span><br><span class="line">        buildConfigField <span class="string">"boolean"</span>, <span class="string">"LOG_DEBUG"</span>, <span class="string">"true"</span></span><br><span class="line">        <span class="comment">//定义debug时使用的签名文件</span></span><br><span class="line">        signingConfig signingConfigs.test</span><br><span class="line">        signingConfig signingConfigs.test1</span><br><span class="line">        signingConfig signingConfigs.test2</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    release &#123;</span><br><span class="line">        minifyEnabled <span class="keyword">true</span><span class="comment">//是否开启代码混淆</span></span><br><span class="line">        shrinkResources <span class="keyword">true</span><span class="comment">//移除无用的资源文件，依赖于minifyEnabled必须一起用</span></span><br><span class="line">        multiDexEnabled <span class="keyword">true</span><span class="comment">//解决65535</span></span><br><span class="line">        zipAlignEnabled <span class="keyword">true</span><span class="comment">//对齐zip</span></span><br><span class="line">        debuggable <span class="keyword">false</span> <span class="comment">// 是否debug</span></span><br><span class="line">        buildConfigField <span class="string">"boolean"</span>, <span class="string">"LOG_DEBUG"</span>, <span class="string">"false"</span></span><br><span class="line">        signingConfig signingConfigs.test</span><br><span class="line">        signingConfig signingConfigs.test1</span><br><span class="line">        signingConfig signingConfigs.test2</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="不同渠道不同资源文件"><a href="#不同渠道不同资源文件" class="headerlink" title="不同渠道不同资源文件"></a>不同渠道不同资源文件</h2><p>例如：不同渠道需要不同的应用名</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">|-app</span><br><span class="line">    |-src</span><br><span class="line">        |-main</span><br><span class="line">        |   |-res</span><br><span class="line">        |       |-values</span><br><span class="line">        |           |-strings.xml</span><br><span class="line">        |               |-&lt;string name="app_name"&gt;Android-Flavors&lt;/string&gt;</span><br><span class="line">        |-main_test</span><br><span class="line">        |   |-res</span><br><span class="line">        |       |-values</span><br><span class="line">        |           |-strings.xml</span><br><span class="line">        |               |-&lt;string name="app_name"&gt;Android-Flavors-test&lt;/string&gt;</span><br><span class="line">        |-main_test1</span><br><span class="line">        |   |-res</span><br><span class="line">        |       |-values</span><br><span class="line">        |           |-strings.xml</span><br><span class="line">        |               |-&lt;string name="app_name"&gt;Android-Flavors-test1&lt;/string&gt;</span><br><span class="line">        |-main_test2</span><br><span class="line">        |   |-res</span><br><span class="line">        |       |-values</span><br><span class="line">        |           |-strings.xml</span><br><span class="line">        |               |-&lt;string name="app_name"&gt;Android-Flavors-test2&lt;/string&gt;</span><br></pre></td></tr></table></figure>
+<p>在 src 下创建与 main 同级的渠道目录，里面可创建与 main 目录下对应的目录或文件，打包时会以增量或覆盖的方式替换。</p>
+<p>res 目录下的文件可以同名覆盖，java 或其他代码目录中类名不允许重复。</p>
+<p>编译某个渠道包的时候遵循以下4条准则：</p>
+<ul>
+<li>所有的源码(src/*/java)会用来共同编译生成一个 Apk，不允许覆盖，会提示 duplicate class found</li>
+<li>所有的 Manifests 都将会合并，这样一来就允许渠道包中可以定义不同的组件与权限，具体可参考官方 Manifest Merger</li>
+<li>渠道中的资源会以覆盖或增量的形式与 main 合并，优先级为 Build Type &gt; Product Flavor &gt; Main sourceSet</li>
+<li>每个 Build Variant 都会生成自己的 R 文件</li>
+</ul>
+<h2 id="第三方-SDK"><a href="#第三方-SDK" class="headerlink" title="第三方 SDK"></a>第三方 SDK</h2><p>例如：test1 渠道中需要使用某个 SDK，而其他渠道不需要使用。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">    productFlavors &#123;</span><br><span class="line">        test1 &#123;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line">dependencies &#123;</span><br><span class="line">    provided <span class="string">'com.xxx.sdk:xxx:1.0'</span><span class="comment">//提供 sdk</span></span><br><span class="line">    test1Compile <span class="string">'com.xxx.sdk:xxx:1.0'</span><span class="comment">//指定 test1 渠道编译</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>接下来，需要在代码中使用反射技术判断应用程序是否添加了该SDK，从而决定是否要使用 SDK。部分代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> useSdk;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Class.forName(<span class="string">"com.xxx.sdk.XXX"</span>);</span><br><span class="line">            useSdk = <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ClassNotFoundException ignored) &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h2><p><a href="https://github.com/jeanboydev/Android-Flavors" target="_blank" rel="noopener">https://github.com/jeanboydev/Android-Flavors</a></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://tech.meituan.com/mt-apk-adaptation.html" target="_blank" rel="noopener">美团Android自动化之旅—适配渠道包</a></p>
+<p><a href="http://blog.csdn.net/codezjx/article/details/49516151" target="_blank" rel="noopener">Gradle App项目的多渠道打包实现</a></p>
+<p><a href="http://saiwu-bigkoo.github.io/2015/10/16/android/" target="_blank" rel="noopener">多渠道打包</a></p>
+<h2 id="扫一扫关注我的公众账号"><a href="#扫一扫关注我的公众账号" class="headerlink" title="扫一扫关注我的公众账号"></a>扫一扫关注我的公众账号</h2><p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/wechat/qrcode_for_gh_26eef6f9e7c1_258.jpg?raw=true" width="256" height="256"></p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/Android/">#Android</a> <a class="fw3 ph1 dib" href="/tags/Flavors/">#Flavors</a> <a class="fw3 ph1 dib" href="/tags/多渠道/">#多渠道</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="https://avatars2.githubusercontent.com/u/5093954?s=460&v=4" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="曹建波（@jeanboy）">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            嗨，我是曹建波（@jeanboy），一名来自中国的 Android / iOS / 前端 开发者。<br/><br/>现居北京，专注于移动应用开发，热爱开源，热爱分享。
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>分类</h3>
+    
+        <p>
+            <a href="/categories/Android/">Android</a>
+        </p>
+    
+</div>
+
+
+                        <hr class="dn-l mw4 black-50 mt5" />
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p>
+            <a href="/2017/09/09/android-bootloader/">Android - 系统启动过程</a>
+        </p>
+    
+        <p>
+            <a href="/2017/08/08/android-binder/">Android - Binder 进程间通讯</a>
+        </p>
+    
+        <p>
+            <a href="/2017/07/07/android-flavors/">Android - 多渠道打包最佳实践</a>
+        </p>
+    
+        <p>
+            <a href="/2017/06/15/android-update-to-sutdio-3/">Android Studio 3.0 升级指南</a>
+        </p>
+    
+        <p>
+            <a href="/2017/06/06/download-android-sources-code-for-windows/">Windows 环境下载 Android 源码</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5 bg-2">
+    <div class="mv8">
+        <div class="center tc">
+            
+                <div class="dib mh3">
+                    <a class="f3 f2-ns white dim" href="https://github.com/jeanboydev" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
+                
+                <div class="dib mh3">
+                    <a class="f3 f2-ns white dim" href="mailto:jeanboy@foxmail.com" target="_blank">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </div>
+                
+        </div>
+        <div class="f6 f5-ns center tc white pt5 fw3">
+            ©2018 Jeanboy All Rights Reserved | Design & Hexo
+        </div>
+    </div>
+</div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

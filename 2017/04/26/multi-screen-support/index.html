@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Android 屏幕适配全攻略"/>
+        <meta property="og:title" content="Android - 屏幕适配全攻略"/>
     
 
     <!--Open Graph Description-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>Android 屏幕适配全攻略 - Jeanboy | 曹建波</title>
+    <title>Android - 屏幕适配全攻略 - Jeanboy | 曹建波</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
@@ -145,7 +145,7 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">Android 屏幕适配全攻略</h1>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Android - 屏幕适配全攻略</h1>
             <p class="f4 fw3 pab-100px tc tc-m tl-ns">2017-04-26</p>
         </div>
     </div>
@@ -172,12 +172,12 @@
                     
 
                     <!-- Main Post Content -->
-                    <h1 id="Android-屏幕适配全攻略"><a href="#Android-屏幕适配全攻略" class="headerlink" title="Android-屏幕适配全攻略"></a>Android-屏幕适配全攻略</h1><h2 id="一、Android屏幕碎片化"><a href="#一、Android屏幕碎片化" class="headerlink" title="一、Android屏幕碎片化"></a>一、Android屏幕碎片化</h2><p>由于 Android 系统的开发性，任何用户、开发者、OEM厂商、运营商都可以对 Android 进行定制，修改成他们想要的样子。各大厂商、开发者的标准不统一，所以就造成了 Android 系统碎片化。</p>
+                    <h1 id="Android-屏幕适配全攻略"><a href="#Android-屏幕适配全攻略" class="headerlink" title="Android - 屏幕适配全攻略"></a>Android - 屏幕适配全攻略</h1><h2 id="一、Android-屏幕碎片化"><a href="#一、Android-屏幕碎片化" class="headerlink" title="一、Android 屏幕碎片化"></a>一、Android 屏幕碎片化</h2><p>由于 Android 系统的开发性，任何用户、开发者、OEM厂商、运营商都可以对 Android 进行定制，修改成他们想要的样子。各大厂商、开发者的标准不统一，所以就造成了 Android 系统碎片化。</p>
 <p>但是这种“碎片化”到底到达什么程度呢？</p>
 <p>下面这张图片所显示的内容足以充分说明当今 Android 系统碎片化问题的严重性，因为该图片中的每一个矩形都代表着一种 Android 设备。</p>
 <p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_screens_support/08.png?raw=true" alt="图08"></p>
-<p>而随着支持Android系统的设备(手机、平板、电视、手表)的增多，设备碎片化、品牌碎片化、系统碎片化、传感器碎片化和屏幕碎片化的程度也在不断地加深。而我们今天要探讨的，则是对我们开发影响比较大的——屏幕的碎片化。</p>
-<p>下面这张图是Android屏幕尺寸的示意图，在这张图里面，蓝色矩形的大小代表不同尺寸，颜色深浅则代表所占百分比的大小。</p>
+<p>而随着支持 Android 系统的设备(手机、平板、电视、手表)的增多，设备碎片化、品牌碎片化、系统碎片化、传感器碎片化和屏幕碎片化的程度也在不断地加深。而我们今天要探讨的，则是对我们开发影响比较大的——屏幕的碎片化。</p>
+<p>下面这张图是 Android 屏幕尺寸的示意图，在这张图里面，蓝色矩形的大小代表不同尺寸，颜色深浅则代表所占百分比的大小。</p>
 <p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_screens_support/06.png?raw=true" alt="图06"></p>
 <p>而与之相对应的，则是下面这张图。这张图显示了 IOS 设备所需要进行适配的屏幕尺寸和占比。</p>
 <p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_screens_support/07.png?raw=true" alt="图07"></p>
@@ -206,7 +206,7 @@
 <p>例如：计算Nexus5的屏幕像素密度：屏幕尺寸：4.95 inch、分辨率：1920×1080，屏幕像素密度(ppi)：445</p>
 </blockquote>
 <p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_screens_support/02.png?raw=true" alt="图02"></p>
-<h4 id="2-什么是dp、dip、dpi、sp、px？之间的关系是什么？"><a href="#2-什么是dp、dip、dpi、sp、px？之间的关系是什么？" class="headerlink" title="2. 什么是dp、dip、dpi、sp、px？之间的关系是什么？"></a>2. 什么是dp、dip、dpi、sp、px？之间的关系是什么？</h4><p>dip/dp</p>
+<h4 id="2-什么是-dp、dip、dpi、sp、px？之间的关系是什么？"><a href="#2-什么是-dp、dip、dpi、sp、px？之间的关系是什么？" class="headerlink" title="2. 什么是 dp、dip、dpi、sp、px？之间的关系是什么？"></a>2. 什么是 dp、dip、dpi、sp、px？之间的关系是什么？</h4><p>dip/dp</p>
 <blockquote>
 <p>在定义 UI 布局时应使用的虚拟像素单位，用于以密度无关方式表示布局维度或位置。</p>
 <p>Density Independent Pixels(密度无关像素)的缩写。<br>以160dpi为基准，1dp = 1px。单位转换： px = dp * (dpi / 160)。</p>
@@ -222,9 +222,9 @@
 <p>sp</p>
 <blockquote>
 <p>Scale-Independent Pixels 的缩写，可以根据文字大小首选项自动进行缩放。</p>
-<p>Google推荐我们使用 12s p以上的大小，通常可以使用 12sp，14sp，18sp，22sp，最好不要使用<strong>奇数</strong>和<strong>小数</strong>。</p>
+<p>Google 推荐我们使用 12s p以上的大小，通常可以使用 12sp，14sp，18sp，22sp，最好不要使用<strong>奇数</strong>和<strong>小数</strong>。</p>
 </blockquote>
-<h4 id="3-什么是mdpi、hdpi、xdpi、xxdpi、xxxdpi？如何计算和区分？"><a href="#3-什么是mdpi、hdpi、xdpi、xxdpi、xxxdpi？如何计算和区分？" class="headerlink" title="3. 什么是mdpi、hdpi、xdpi、xxdpi、xxxdpi？如何计算和区分？"></a>3. 什么是mdpi、hdpi、xdpi、xxdpi、xxxdpi？如何计算和区分？</h4><table>
+<h4 id="3-什么是-mdpi、hdpi、xdpi、xxdpi、xxxdpi？如何计算和区分？"><a href="#3-什么是-mdpi、hdpi、xdpi、xxdpi、xxxdpi？如何计算和区分？" class="headerlink" title="3. 什么是 mdpi、hdpi、xdpi、xxdpi、xxxdpi？如何计算和区分？"></a>3. 什么是 mdpi、hdpi、xdpi、xxdpi、xxxdpi？如何计算和区分？</h4><table>
 <thead>
 <tr>
 <th style="text-align:left">名称</th>
@@ -286,7 +286,7 @@
 <blockquote>
 <p>这里只是展示了常用的一些配置限定符，具体用法和详情请参阅：<a href="https://developer.android.com/guide/practices/screens_support.html?hl=zh-cn#qualifiers" target="_blank" rel="noopener">Google官方开发文档-使用配置限定符</a></p>
 </blockquote>
-<h4 id="2-使用NinePatch-9-图片"><a href="#2-使用NinePatch-9-图片" class="headerlink" title="2. 使用NinePatch(.9)图片"></a>2. 使用NinePatch(.9)图片</h4><p>什么是.9图？</p>
+<h4 id="2-使用-NinePatch-9-图片"><a href="#2-使用-NinePatch-9-图片" class="headerlink" title="2. 使用 NinePatch(.9) 图片"></a>2. 使用 NinePatch(.9) 图片</h4><p>什么是.9图？</p>
 <blockquote>
 <p>NinePatch 是一种 PNG 图像，在其中可定义当视图中的内容超出正常图像边界时 Android 缩放的可拉伸区域。 后缀以 <strong>.9.png</strong> 结尾，命名格式为：xxx.9.png。<br><br>如：普通图：ic_launcher<strong>.png</strong> <br><br>.9图 为：ic_launcher<strong>.9.png</strong> <br><br>文件位置： res/drawable/filename.9.png 文件名用作资源 ID。</p>
 </blockquote>
@@ -310,7 +310,7 @@
 <p><strong>黄色区域</strong>：表示前景能显示的横向范围。即前景的最左边可以显示到什么地方，最右边可以显示的什么地方。</p>
 <p>蓝色和黄色相交部分：表示整个前景能显示的区域。一个区域是矩形的，蓝色规定了上下边界，黄色规定了左右边界，两者共同当然也就规定了一个矩形区域。</p>
 </blockquote>
-<h4 id="3-可绘制的资源文件Drawable"><a href="#3-可绘制的资源文件Drawable" class="headerlink" title="3.可绘制的资源文件Drawable"></a>3.可绘制的资源文件Drawable</h4><blockquote>
+<h4 id="3-可绘制的资源文件-Drawable"><a href="#3-可绘制的资源文件-Drawable" class="headerlink" title="3.可绘制的资源文件 Drawable"></a>3.可绘制的资源文件 Drawable</h4><blockquote>
 <p>请参考：<a href="https://developer.android.com/guide/topics/resources/drawable-resource.html" target="_blank" rel="noopener">Google官方开发文档-可绘制对象资源</a></p>
 </blockquote>
 <h4 id="4-最佳做法"><a href="#4-最佳做法" class="headerlink" title="4. 最佳做法"></a>4. 最佳做法</h4><ol>
@@ -383,23 +383,23 @@
     <h3>近期文章</h3>
     
         <p>
-            <a href="/2017/05/15/android-handler/">Android - Handler 消息机制</a>
+            <a href="/2017/09/09/android-bootloader/">Android - 系统启动过程</a>
         </p>
     
         <p>
-            <a href="/2017/05/08/android-ipc/">Android - IPC 多进程</a>
+            <a href="/2017/08/08/android-binder/">Android - Binder 进程间通讯</a>
         </p>
     
         <p>
-            <a href="/2017/05/01/android-launch-mode-and-intent-filter/">Android - Activity LaunchMode 启动模式 &amp; IntentFilter </a>
+            <a href="/2017/07/07/android-flavors/">Android - 多渠道打包最佳实践</a>
         </p>
     
         <p>
-            <a href="/2017/04/30/android-life-cycle/">Android - Activity 生命周期</a>
+            <a href="/2017/06/15/android-update-to-sutdio-3/">Android Studio 3.0 升级指南</a>
         </p>
     
         <p>
-            <a href="/2017/04/28/decompile/">Android - 反编译指南</a>
+            <a href="/2017/06/06/download-android-sources-code-for-windows/">Windows 环境下载 Android 源码</a>
         </p>
     
 </div>

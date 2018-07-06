@@ -3,6 +3,132 @@
 
 
     
+  <url>
+    <loc>http://jeanboy.cn/2017/06/15/android-update-to-sutdio-3/</loc>
+    <lastmod>2018-07-06T08:00:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android Studio 3.0 升级指南</title>
+        <pubTime>2017-06-15T08:10:44.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Android Studio</tag>
+         
+        <tag>Gradle</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://jeanboy.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeanboy.cn/2017/08/08/android-binder/</loc>
+    <lastmod>2018-07-06T08:00:16.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android - Binder 进程间通讯</title>
+        <pubTime>2017-08-08T10:10:44.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Binder</tag>
+         
+        <tag>进程间通信</tag>
+         
+        <tag>源码分析</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://jeanboy.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeanboy.cn/2017/07/07/android-flavors/</loc>
+    <lastmod>2018-07-06T08:00:16.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android - 多渠道打包最佳实践</title>
+        <pubTime>2017-07-07T03:10:44.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Flavors</tag>
+         
+        <tag>多渠道</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://jeanboy.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeanboy.cn/2017/09/09/android-bootloader/</loc>
+    <lastmod>2018-07-06T08:00:16.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android - 系统启动过程</title>
+        <pubTime>2017-09-09T10:10:44.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>源码分析</tag>
+         
+        <tag>Bootloader</tag>
+         
+        <tag>开机过程</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://jeanboy.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeanboy.cn/2017/06/06/download-android-sources-code-for-windows/</loc>
+    <lastmod>2018-07-06T07:59:11.000Z</lastmod>
+    <data>
+        <display>
+        <title>Windows 环境下载 Android 源码</title>
+        <pubTime>2017-06-06T08:10:44.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Source Code</tag>
+         
+        <tag>Download</tag>
+         
+        <tag>源码下载</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://jeanboy.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
     
     
@@ -137,7 +263,7 @@
     <lastmod>2018-07-04T03:53:46.000Z</lastmod>
     <data>
         <display>
-        <title>Android 屏幕适配全攻略</title>
+        <title>Android - 屏幕适配全攻略</title>
         <pubTime>2017-04-26T03:10:44.000Z</pubTime>
         
         <tag>Android</tag>

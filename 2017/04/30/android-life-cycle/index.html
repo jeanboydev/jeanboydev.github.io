@@ -178,7 +178,7 @@
 <h2 id="典型情况下生命周期分析"><a href="#典型情况下生命周期分析" class="headerlink" title="典型情况下生命周期分析"></a>典型情况下生命周期分析</h2><ol>
 <li><p>一般情况下，当当前 Activity 从<strong>不可见</strong>重新变为<strong>可见</strong>状态时，<strong>onRestart</strong> 方法就会被调用。</p>
 </li>
-<li><p>当用户打开<strong>新的 Activity</strong> 或者<strong>切换到桌面</strong>的时候，回调如下：<strong>onPause</strong> -&gt; <strong>onStop</strong>，但是如果新Activity采用了<strong>透明主题</strong>，那么 <strong>onStop</strong> 方法不会被回调。<br>当用户<strong>再次回到原来的 Activity</strong> 时，回调如下：<strong>onRestart</strong> -&gt; <strong>onStart</strong> -&gt; <strong>onResume</strong>。</p>
+<li><p>当用户打开<strong>新的 Activity</strong> 或者<strong>切换到桌面</strong>的时候，回调如下：<strong>onPause</strong> -&gt; <strong>onStop</strong>，但是如果新 Activity 采用了<strong>透明主题</strong>，那么 <strong>onStop</strong> 方法不会被回调。<br>当用户<strong>再次回到原来的 Activity</strong> 时，回调如下：<strong>onRestart</strong> -&gt; <strong>onStart</strong> -&gt; <strong>onResume</strong>。</p>
 </li>
 <li><p><strong>onStart</strong> 和 <strong>onStop</strong> 对应，它们是从 <strong>Activity 是否可见</strong>这个角度来回调的；<br><strong>onPause</strong> 和 <strong>onResume</strong> 方法对应，它们是从 <strong>Activity 是否位于前台</strong>这个角度来回调的。</p>
 </li>
@@ -259,23 +259,23 @@
     <h3>近期文章</h3>
     
         <p>
-            <a href="/2017/05/15/android-handler/">Android - Handler 消息机制</a>
+            <a href="/2017/09/09/android-bootloader/">Android - 系统启动过程</a>
         </p>
     
         <p>
-            <a href="/2017/05/08/android-ipc/">Android - IPC 多进程</a>
+            <a href="/2017/08/08/android-binder/">Android - Binder 进程间通讯</a>
         </p>
     
         <p>
-            <a href="/2017/05/01/android-launch-mode-and-intent-filter/">Android - Activity LaunchMode 启动模式 &amp; IntentFilter </a>
+            <a href="/2017/07/07/android-flavors/">Android - 多渠道打包最佳实践</a>
         </p>
     
         <p>
-            <a href="/2017/04/30/android-life-cycle/">Android - Activity 生命周期</a>
+            <a href="/2017/06/15/android-update-to-sutdio-3/">Android Studio 3.0 升级指南</a>
         </p>
     
         <p>
-            <a href="/2017/04/28/decompile/">Android - 反编译指南</a>
+            <a href="/2017/06/06/download-android-sources-code-for-windows/">Windows 环境下载 Android 源码</a>
         </p>
     
 </div>

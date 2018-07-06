@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="嗨，我是曹建波（@jeanboy），一名来自中国的 Android / iOS / 前端 开发者。现居北京，专注于移动应用开发，热爱分享。">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="曹建波（@jeanboy）">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Android - 系统启动过程"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="嗨，我是曹建波（@jeanboy），一名来自中国的 Android / iOS / 前端 开发者。现居北京，专注于移动应用开发，热爱分享。" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Jeanboy | 曹建波"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Android - 系统启动过程 - Jeanboy | 曹建波</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Analytics -->
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121861403-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-121861403-1');
+    </script>
+    
+    
+    <!-- Baidu Analytics -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?63e553d8293bc74f1160b044738c6107";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    
+    <!-- google-site-verification -->
+    <meta name="google-site-verification" content="R8TtKySmf9yNtEuFKXO0c3YwtVbtTjJU6jWQrzlsxDM" />
+    <!-- baidu-site-verification -->
+    <meta name="baidu-site-verification" content="T8pesQWGrJ" />
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="Jeanboy | 曹建波">
+            <img src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg" class="dib h3" alt="Jeanboy | 曹建波">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="首页">
+                    首页
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="归档">
+                    归档
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags" 
+                    title="标签">
+                    标签
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/categories" 
+                    title="分类">
+                    分类
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/about" 
+                    title="关于我">
+                    关于我
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Android - 系统启动过程</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2017-09-09</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa fa-android"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/Android/">#Android</a> <a class="fw3 ph1 dib" href="/tags/源码分析/">#源码分析</a> <a class="fw3 ph1 dib" href="/tags/Bootloader/">#Bootloader</a> <a class="fw3 ph1 dib" href="/tags/开机过程/">#开机过程</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="Android-系统启动过程"><a href="#Android-系统启动过程" class="headerlink" title="Android - 系统启动过程"></a>Android - 系统启动过程</h1><h2 id="计算机是如何启动的？"><a href="#计算机是如何启动的？" class="headerlink" title="计算机是如何启动的？"></a>计算机是如何启动的？</h2><p>首先熟悉一些概念，计算机的硬件包括：CPU，内存，硬盘，显卡，显示器，键盘鼠标等其他输入输出设备。 所有的软件（比如：操作系统）都是存放在硬盘上，程序执行时需要将程序从硬盘上读取到内存中然后加载到 CPU 中来运行。 当我们按下开机键时，此时内存中什么都没有，因此需要借助某种方式，将操作系统加载到内存中，而完成这项任务的就是 BIOS。</p>
+<ul>
+<li>引导阶段</li>
+</ul>
+<p>BIOS: Basic Input/Output System（基本输入输出系统），在 IBM PC 兼容系统上，是一种业界标准的固件接口（来自维基百科）。 BIOS 一般是主板芯片上的一个程序，计算机通电后，第一件事就是读取它。</p>
+<p>BIOS 程序首先检查计算机硬件能否满足运行的基本条件，这叫做”硬件自检”（Power-On Self-Test），缩写为 POST。 如果硬件出现问题，主板会发出不同含义的蜂鸣，启动中止。 如果没有问题，屏幕就会显示出 CPU，内存，硬盘等信息。</p>
+<p>硬件自检完成后，BIOS 把控制权转交给下一阶段的启动程序。 这时 BIOS 需要知道，下一阶段的启动程序到底存放在哪一个设备当中。 也就是说 BIOS 需要有一个外部存储设备的排序，排在前面的设备就是优先转交控制权的设备。 这种排序叫做启动排序，也就是我们平时进入 BIOS 界面时能看到的 Boot Sequence。</p>
+<p>如果我们没有进行特殊操作的话，那么 BIOS 就会按照这个启动顺序将控制权交给下一个存储设备。 我们在使用 U 盘光盘之类的装系统时就是在这里将启动顺序改变了，将本来要移交给硬盘的控制权交给了 U 盘或者光盘。</p>
+<p>第一存储设备被激活后，计算机读取该设备的第一个扇区，也就是读取最前面的 512 个字节。 如果这 512 个字节的最后两个字节是 0x55 和 0xAA ，表明这个设备可以用于启动；如果不是，表明设备不能用于启动，控制权于是被转交给“启动顺序”中的下一个设备。</p>
+<p>这最前面的 512 个字节，就叫做”主引导记录”（Master boot record，缩写为 MBR）。 主引导记录 MBR 是位于磁盘最前边的一段引导代码。它负责磁盘操作系统对磁盘进行读写时分区合法性的判别、分区引导信息的定位，它由磁盘操作系统在对硬盘进行初始化时产生的。 硬盘的主引导记录 MBR 是不属于任何一个操作系统的，它先于所有的操作系统而被调入内存，并发挥作用，然后才将控制权交给主分区内的操作系统，并用主分区信息表来管理硬盘。</p>
+<p>MBR 只有512个字节，放不了太多东西。 它的主要作用是，告诉计算机到硬盘的哪一个位置去找操作系统。 我们找到可用的 MBR 后，计算机从 MBR 中读取前面 446 字节的机器码之后，不再把控制权转交给某一个分区，而是运行事先安装的”启动管理器”（boot loader），由用户选择启动哪一个操作系统。</p>
+<ul>
+<li>加载内核阶段</li>
+</ul>
+<p>选择完操作系统后，控制权转交给操作系统，操作系统的内核首先被载入内存。</p>
+<p>以 Linux 系统为例，先载入 /boot 目录下面的 kernel。 内核加载成功后，第一个运行的程序是 /sbin/init。 它根据配置文件（Debian 系统是 /etc/initab ）产生 init 进程。 这是 Linux 启动后的第一个进程，pid 进程编号为 1，其他进程都是它的后代。</p>
+<p>然后，init 线程加载系统的各个模块，比如：窗口程序和网络程序，直至执行 /bin/login 程序，跳出登录界面，等待用户输入用户名和密码。</p>
+<p>至此，全部启动过程完成。</p>
+<h2 id="Android-手机的启动过程"><a href="#Android-手机的启动过程" class="headerlink" title="Android 手机的启动过程"></a>Android 手机的启动过程</h2><p>Android 系统虽然也是基于 Linux 系统的，但是由于 Android 属于嵌入式设备，并没有像 PC 那样的 BIOS 程序。 取而代之的是 Bootloader —— 系统启动加载器。 它类似于 BIOS，在系统加载前，用以初始化硬件设备，建立内存空间的映像图，为最终调用系统内核准备好环境。 在 Android 里没有硬盘，而是 ROM，它类似于硬盘存放操作系统，用户程序等。 ROM 跟硬盘一样也会划分为不同的区域，用于放置不同的程序，在 Android 中主要划分为一下几个分区：</p>
+<ul>
+<li>/boot：存放引导程序，包括内核和内存操作程序</li>
+<li>/system：相当于电脑c盘，存放Android系统及系统应用</li>
+<li>/recovery：恢复分区，可以进入该分区进行系统恢复</li>
+<li>/data：用户数据区，包含了用户的数据：联系人、短信、设置、用户安装的程序</li>
+<li>/cache：安卓系统缓存区，保存系统最常访问的数据和应用程序</li>
+<li>/misc：包含一些杂项内容，如系统设置和系统功能启用禁用设置</li>
+<li>/sdcard：用户自己的存储区，可以存放照片，音乐，视频等文件</li>
+</ul>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_boot_loader/boot_image.png?raw=true" alt=""></p>
+<p>那么 Bootloader 是如何被加载的呢？跟 PC 启动过程类似，当开机通电时首先会加载 Bootloader，Bootloader 会读取 ROM 找到操作系统并将 Linux 内核加载到 RAM 中。</p>
+<p>当 Linux 内核启动后会初始化各种软硬件环境，加载驱动程序，挂载根文件系统，Linux 内核加载的最后阶段会启动执行第一个用户空间进程 init 进程。</p>
+<h2 id="init-进程"><a href="#init-进程" class="headerlink" title="init 进程"></a>init 进程</h2><p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_boot_loader/android-booting.png?raw=true" alt=""></p>
+<p>init 是 Linux 系统中用户空间的第一个进程(pid=1)，Kernel 启动后会调用 /system/core/init/Init.cpp 的 main() 方法。</p>
+<ul>
+<li>Init.main()</li>
+</ul>
+<p>首先初始化 Kernel log，创建一块共享的内存空间，加载 /default.prop 文件，解析 init.rc 文件。</p>
+<h2 id="init-rc-文件"><a href="#init-rc-文件" class="headerlink" title="init.rc 文件"></a>init.rc 文件</h2><p>init.rc 文件是 Android 系统的重要配置文件，位于 /system/core/rootdir/ 目录中。 主要功能是定义了系统启动时需要执行的一系列 action 及执行特定动作、设置环境变量和属性和执行特定的 service。 </p>
+<p>init.rc 脚本文件配置了一些重要的服务，init 进程通过创建子进程启动这些服务，这里创建的 service 都属于 native 服务，运行在 Linux 空间，通过 socket 向上层提供特定的服务，并以守护进程的方式运行在后台。</p>
+<p>通过 init.rc 脚本系统启动了以下几个重要的服务：</p>
+<ul>
+<li>service_manager：启动 binder IPC，管理所有的 Android 系统服务</li>
+<li>mountd：设备安装 Daemon，负责设备安装及状态通知</li>
+<li>debuggerd：启动 debug system，处理调试进程的请求</li>
+<li>rild：启动 radio interface layer daemon 服务，处理电话相关的事件和请求</li>
+<li>media_server：启动 AudioFlinger，MediaPlayerService 和 CameraService，负责多媒体播放相关的功能，包括音视频解码</li>
+<li>surface_flinger：启动 SurfaceFlinger 负责显示输出</li>
+<li>zygote：进程孵化器，启动 Android Java VMRuntime 和启动 systemserver，负责 Android 应用进程的孵化工作</li>
+</ul>
+<p>在这个阶段你可以在设备的屏幕上看到 “Android” logo 了。</p>
+<p>以上工作执行完，init 进程就会进入 loop 状态。</p>
+<h2 id="service-manager-进程"><a href="#service-manager-进程" class="headerlink" title="service_manager 进程"></a>service_manager 进程</h2><p>ServiceManager 是 Binder IPC 通信过程中的守护进程，本身也是一个 Binder 服务。ServiceManager 进程主要是启动 Binder，提供服务的查询和注册。</p>
+<p>具体过程详见 Binder：<a href="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/android/Android-Binder进程间通讯.md" target="_blank" rel="noopener">Android Binder 进程间通讯</a></p>
+<h2 id="surface-flinger-进程"><a href="#surface-flinger-进程" class="headerlink" title="surface_flinger 进程"></a>surface_flinger 进程</h2><p>SurfaceFlinger 负责图像绘制，是应用 UI 的核心，其功能是合成所有 Surface 并渲染到显示设备。SurfaceFlinger 进程主要是启动 FrameBuffer，初始化显示系统。</p>
+<h2 id="media-server-进程"><a href="#media-server-进程" class="headerlink" title="media_server 进程"></a>media_server 进程</h2><p>MediaServer 进程主要是启动 AudioFlinger 音频服务，CameraService 相机服务。负责处理音频解析播放，相机相关的处理。</p>
+<h2 id="Zygote-进程"><a href="#Zygote-进程" class="headerlink" title="Zygote 进程"></a>Zygote 进程</h2><p>fork 创建进程过程：<br><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_boot_loader/android-process.png?raw=true" alt=""></p>
+<p>Zygote 进程孵化了所有的 Android 应用进程，是 Android Framework 的基础，该进程的启动也标志着 Framework 框架初始化启动的开始。 </p>
+<p>Zygote 服务进程的主要功能：</p>
+<ul>
+<li>注册底层功能的 JNI 函数到虚拟机</li>
+<li>预加载 Java 类和资源</li>
+<li>fork 并启动 system_server 核心进程</li>
+<li>作为守护进程监听处理“孵化新进程”的请求</li>
+</ul>
+<p>当 Zygote 进程启动后, 便会执行到 frameworks/base/cmds/app_process/App_main.cpp 文件的 main() 方法。 </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">App_main.main() <span class="comment">//设置进程名，并启动 AppRuntime。</span></span><br><span class="line">AndroidRuntime::start() <span class="comment">//创建 Java 虚拟机，注册 JNI 方法，调用 ZygoteInit.main() 方法。</span></span><br><span class="line">ZygoteInit.main()   <span class="comment">//为 Zygote 注册 socket，预加载类和资源，启动 system_server 进程。</span></span><br></pre></td></tr></table></figure>
+<p>然后 Zygote 进程会进入 loop 状态，等待下次 fork 进程。</p>
+<h2 id="system-server-进程"><a href="#system-server-进程" class="headerlink" title="system_server 进程"></a>system_server 进程</h2><p>system_server 进程 由 Zygote 进程 fork 而来。接下来看下 system_server 启动过程。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//首先会调用 ZygoteInit.startSystemServer() 方法</span></span><br><span class="line">ZygoteInit.startSystemServer()  </span><br><span class="line"><span class="comment">//fork 子进程 system_server，进入 system_server 进程。</span></span><br><span class="line"></span><br><span class="line">ZygoteInit.handleSystemServerProcess()  </span><br><span class="line"><span class="comment">//设置当前进程名为“system_server”，创建 PathClassLoader 类加载器。</span></span><br><span class="line"></span><br><span class="line">RuntimeInit.zygoteInit()    </span><br><span class="line"><span class="comment">//重定向 log 输出，通用的初始化（设置默认异常捕捉方法，时区等），初始化 Zygote -&gt; nativeZygoteInit()。</span></span><br><span class="line"></span><br><span class="line">nativeZygoteInit()  </span><br><span class="line"><span class="comment">//方法经过层层调用，会进入 app_main.cpp 中的 onZygoteInit() 方法。</span></span><br><span class="line"></span><br><span class="line">app_main::onZygoteInit()<span class="comment">// 启动新 Binder 线程。</span></span><br><span class="line"></span><br><span class="line">applicationInit()   </span><br><span class="line"><span class="comment">//方法经过层层调用，会抛出异常 ZygoteInit.MethodAndArgsCaller(m, argv), ZygoteInit.main() 会捕捉该异常。</span></span><br><span class="line"></span><br><span class="line">ZygoteInit.main()   </span><br><span class="line"><span class="comment">//开启 DDMS 功能，preload() 加载资源，预加载 OpenGL，调用 SystemServer.main() 方法。</span></span><br><span class="line"></span><br><span class="line">SystemServer.main() </span><br><span class="line"><span class="comment">//先初始化 SystemServer 对象，再调用对象的 run() 方法。</span></span><br><span class="line"></span><br><span class="line">SystemServer.run()  </span><br><span class="line"><span class="comment">//准备主线程 looper，加载 android_servers.so 库，该库包含的源码在 frameworks/base/services/ 目录下。</span></span><br></pre></td></tr></table></figure>
+<p>system_server 进程启动后将初始化系统上下文（设置主题），创建系统服务管理 SystemServiceManager，然后启动各种系统服务：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">startBootstrapServices(); <span class="comment">// 启动引导服务</span></span><br><span class="line"><span class="comment">//该方法主要启动服务 ActivityManagerService，PowerManagerService，LightsService，DisplayManagerService，PackageManagerService，UserManagerService。</span></span><br><span class="line"><span class="comment">//设置 ActivityManagerService，启动传感器服务。</span></span><br><span class="line"></span><br><span class="line">startCoreServices();      <span class="comment">// 启动核心服务</span></span><br><span class="line"><span class="comment">//该方法主要</span></span><br><span class="line"><span class="comment">//启动服务 BatteryService 用于统计电池电量，需要 LightService。</span></span><br><span class="line"><span class="comment">//启动服务 UsageStatsService，用于统计应用使用情况。</span></span><br><span class="line"><span class="comment">//启动服务 WebViewUpdateService。</span></span><br><span class="line"></span><br><span class="line">startOtherServices();     <span class="comment">// 启动其他服务</span></span><br><span class="line"><span class="comment">//该方法主要启动服务 InputManagerService，WindowManagerService。</span></span><br><span class="line"><span class="comment">//等待 ServiceManager，SurfaceFlinger启动完成，然后显示启动界面。</span></span><br><span class="line"><span class="comment">//启动服务 StatusBarManagerService，</span></span><br><span class="line"><span class="comment">//准备好 window, power, package, display 服务：</span></span><br><span class="line"><span class="comment">//	- WindowManagerService.systemReady()</span></span><br><span class="line"><span class="comment">//	- PowerManagerService.systemReady()</span></span><br><span class="line"><span class="comment">//	- PackageManagerService.systemReady()</span></span><br><span class="line"><span class="comment">//	- DisplayManagerService.systemReady()</span></span><br></pre></td></tr></table></figure>
+<p>所有的服务启动完成后会注册到 ServiceManager。<br>ActivityManagerService 服务启动完成后，会进入 ActivityManagerService.systemReady()，然后启动 SystemUI，WebViewFactory，Watchdog，最后启动桌面 Launcher App。</p>
+<p>最后会进入循环 Looper.loop()。</p>
+<h2 id="ActivityManagerService-启动"><a href="#ActivityManagerService-启动" class="headerlink" title="ActivityManagerService 启动"></a>ActivityManagerService 启动</h2><p>启动桌面 Launcher App 需要等待 ActivityManagerService 启动完成。我们来看下 ActivityManagerService 启动过程。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">ActivityManagerService(Context) </span><br><span class="line"><span class="comment">//创建名为“ActivityManager”的前台线程，并获取mHandler。</span></span><br><span class="line"><span class="comment">//通过 UiThread 类，创建名为“android.ui”的线程。</span></span><br><span class="line"><span class="comment">//创建前台广播和后台广播接收器。</span></span><br><span class="line"><span class="comment">//创建目录 /data/system。</span></span><br><span class="line"><span class="comment">//创建服务 BatteryStatsService。</span></span><br><span class="line"></span><br><span class="line">ActivityManagerService.start()  <span class="comment">//启动电池统计服务，创建 LocalService，并添加到 LocalServices。</span></span><br><span class="line"></span><br><span class="line">ActivityManagerService.startOtherServices() -&gt; installSystemProviders()</span><br><span class="line"><span class="comment">//安装所有的系统 Provider。</span></span><br><span class="line"></span><br><span class="line">ActivityManagerService.systemReady()</span><br><span class="line"><span class="comment">//恢复最近任务栏的 task。</span></span><br><span class="line"><span class="comment">//启动 WebView，SystemUI，开启 Watchdog，启动桌面 Launcher App。</span></span><br><span class="line"><span class="comment">//发送系统广播。</span></span><br></pre></td></tr></table></figure>
+<p>启动桌面 Launcher App，首先会通过 Zygote 进程 fork 一个新进程作为 App 进程，然后创建 Application，创建启动 Activity，最后用户才会看到桌面。</p>
+<h2 id="完整启动过程"><a href="#完整启动过程" class="headerlink" title="完整启动过程"></a>完整启动过程</h2><p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_boot_loader/android-bootloader.png?raw=true" alt=""></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="http://www.ruanyifeng.com/blog/2013/02/booting.html" target="_blank" rel="noopener">计算机是如何启动的？</a></li>
+<li><a href="http://daily.zhihu.com/story/8803295" target="_blank" rel="noopener">按下电源键之后，电脑又默默干了很多事</a></li>
+<li><a href="http://gityuan.com/2016/02/01/android-booting/" target="_blank" rel="noopener">Android系统启动-概述</a></li>
+</ul>
+<h2 id="扫一扫关注我的公众账号"><a href="#扫一扫关注我的公众账号" class="headerlink" title="扫一扫关注我的公众账号"></a>扫一扫关注我的公众账号</h2><p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/wechat/qrcode_for_gh_26eef6f9e7c1_258.jpg?raw=true" width="256" height="256"></p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/Android/">#Android</a> <a class="fw3 ph1 dib" href="/tags/源码分析/">#源码分析</a> <a class="fw3 ph1 dib" href="/tags/Bootloader/">#Bootloader</a> <a class="fw3 ph1 dib" href="/tags/开机过程/">#开机过程</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="https://avatars2.githubusercontent.com/u/5093954?s=460&v=4" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="曹建波（@jeanboy）">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            嗨，我是曹建波（@jeanboy），一名来自中国的 Android / iOS / 前端 开发者。<br/><br/>现居北京，专注于移动应用开发，热爱开源，热爱分享。
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>分类</h3>
+    
+        <p>
+            <a href="/categories/Android/">Android</a>
+        </p>
+    
+</div>
+
+
+                        <hr class="dn-l mw4 black-50 mt5" />
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p>
+            <a href="/2017/09/09/android-bootloader/">Android - 系统启动过程</a>
+        </p>
+    
+        <p>
+            <a href="/2017/08/08/android-binder/">Android - Binder 进程间通讯</a>
+        </p>
+    
+        <p>
+            <a href="/2017/07/07/android-flavors/">Android - 多渠道打包最佳实践</a>
+        </p>
+    
+        <p>
+            <a href="/2017/06/15/android-update-to-sutdio-3/">Android Studio 3.0 升级指南</a>
+        </p>
+    
+        <p>
+            <a href="/2017/06/06/download-android-sources-code-for-windows/">Windows 环境下载 Android 源码</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5 bg-2">
+    <div class="mv8">
+        <div class="center tc">
+            
+                <div class="dib mh3">
+                    <a class="f3 f2-ns white dim" href="https://github.com/jeanboydev" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
+                
+                <div class="dib mh3">
+                    <a class="f3 f2-ns white dim" href="mailto:jeanboy@foxmail.com" target="_blank">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </div>
+                
+        </div>
+        <div class="f6 f5-ns center tc white pt5 fw3">
+            ©2018 Jeanboy All Rights Reserved | Design & Hexo
+        </div>
+    </div>
+</div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
