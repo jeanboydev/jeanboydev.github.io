@@ -2,37 +2,156 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://jeanboy.cn/2017/06/15/android-update-to-sutdio-3/</loc>
+    <loc>http://jeanboy.cn/2018/07/06/jvm-memory/</loc>
     
-    <lastmod>2018-07-06T08:00:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jeanboy.cn/2017/08/08/android-binder/</loc>
-    
-    <lastmod>2018-07-06T08:00:16.000Z</lastmod>
+    <lastmod>2018-07-06T09:33:57.800Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://jeanboy.cn/2017/07/07/android-flavors/</loc>
+    <loc>http://jeanboy.cn/2018/06/16/jvm-gc/</loc>
     
-    <lastmod>2018-07-06T08:00:16.000Z</lastmod>
+    <lastmod>2018-07-06T09:33:55.223Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeanboy.cn/2018/05/05/internet-tcp-ip/</loc>
+    
+    <lastmod>2018-07-06T09:29:08.012Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeanboy.cn/2018/05/22/internet-http-https/</loc>
+    
+    <lastmod>2018-07-06T09:29:04.459Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeanboy.cn/2018/04/21/android-service-start/</loc>
+    
+    <lastmod>2018-07-06T09:21:21.971Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeanboy.cn/2018/03/08/android-surface-surfaceflinger/</loc>
+    
+    <lastmod>2018-07-06T09:09:33.411Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeanboy.cn/2018/02/11/android-activity-window-view/</loc>
+    
+    <lastmod>2018-07-06T09:06:41.855Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeanboy.cn/2018/01/04/android-activity-start/</loc>
+    
+    <lastmod>2018-07-06T09:06:30.272Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeanboy.cn/2017/12/12/android-arch/</loc>
+    
+    <lastmod>2018-07-06T09:02:24.897Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeanboy.cn/2017/10/01/android-performance-optimization-ui/</loc>
+    
+    <lastmod>2018-07-06T08:59:25.910Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeanboy.cn/2017/11/05/android-performance-optimization-memory/</loc>
+    
+    <lastmod>2018-07-06T08:59:05.101Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://jeanboy.cn/2017/09/09/android-bootloader/</loc>
     
-    <lastmod>2018-07-06T08:00:16.000Z</lastmod>
+    <lastmod>2018-07-06T08:36:10.059Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeanboy.cn/2017/08/08/android-binder/</loc>
+    
+    <lastmod>2018-07-06T08:36:09.796Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeanboy.cn/2017/07/07/android-flavors/</loc>
+    
+    <lastmod>2018-07-06T08:36:07.709Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeanboy.cn/2017/05/15/android-handler/</loc>
+    
+    <lastmod>2018-07-06T08:36:05.574Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeanboy.cn/2017/05/08/android-ipc/</loc>
+    
+    <lastmod>2018-07-06T08:36:02.842Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeanboy.cn/2017/05/01/android-launch-mode-and-intent-filter/</loc>
+    
+    <lastmod>2018-07-06T08:35:59.414Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeanboy.cn/2017/04/30/android-life-cycle/</loc>
+    
+    <lastmod>2018-07-06T08:35:57.394Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeanboy.cn/2017/06/15/android-update-to-sutdio-3/</loc>
+    
+    <lastmod>2018-07-06T08:35:54.966Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://jeanboy.cn/2017/06/06/download-android-sources-code-for-windows/</loc>
     
-    <lastmod>2018-07-06T07:59:11.000Z</lastmod>
+    <lastmod>2018-07-06T08:35:52.259Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeanboy.cn/2017/04/26/multi-screen-support/</loc>
+    
+    <lastmod>2018-07-06T08:35:48.420Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeanboy.cn/2017/04/28/decompile/</loc>
+    
+    <lastmod>2018-07-06T08:35:45.252Z</lastmod>
     
   </url>
   
@@ -54,48 +173,6 @@
     <loc>http://jeanboy.cn/tags/index.html</loc>
     
     <lastmod>2018-07-05T03:33:04.970Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jeanboy.cn/2017/05/08/android-ipc/</loc>
-    
-    <lastmod>2018-07-05T03:12:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jeanboy.cn/2017/05/01/android-launch-mode-and-intent-filter/</loc>
-    
-    <lastmod>2018-07-05T03:12:24.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jeanboy.cn/2017/04/30/android-life-cycle/</loc>
-    
-    <lastmod>2018-07-05T03:11:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jeanboy.cn/2017/05/15/android-handler/</loc>
-    
-    <lastmod>2018-07-05T03:10:05.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jeanboy.cn/2017/04/28/decompile/</loc>
-    
-    <lastmod>2018-07-05T03:09:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jeanboy.cn/2017/04/26/multi-screen-support/</loc>
-    
-    <lastmod>2018-07-04T03:53:46.000Z</lastmod>
     
   </url>
   

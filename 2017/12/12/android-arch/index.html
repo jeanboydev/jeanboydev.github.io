@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="嗨，我是曹建波（@jeanboy），一名来自中国的 Android / iOS / 前端 开发者。现居北京，专注于移动应用开发，热爱分享。">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="曹建波（@jeanboy）">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Android 项目架构探索"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="嗨，我是曹建波（@jeanboy），一名来自中国的 Android / iOS / 前端 开发者。现居北京，专注于移动应用开发，热爱分享。" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Jeanboy | 曹建波"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Android 项目架构探索 - Jeanboy | 曹建波</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Analytics -->
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121861403-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-121861403-1');
+    </script>
+    
+    
+    <!-- Baidu Analytics -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?63e553d8293bc74f1160b044738c6107";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    
+    <!-- google-site-verification -->
+    <meta name="google-site-verification" content="R8TtKySmf9yNtEuFKXO0c3YwtVbtTjJU6jWQrzlsxDM" />
+    <!-- baidu-site-verification -->
+    <meta name="baidu-site-verification" content="T8pesQWGrJ" />
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="Jeanboy | 曹建波">
+            <img src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg" class="dib h3" alt="Jeanboy | 曹建波">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="首页">
+                    首页
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="归档">
+                    归档
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags" 
+                    title="标签">
+                    标签
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/categories" 
+                    title="分类">
+                    分类
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/about" 
+                    title="关于我">
+                    关于我
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Android 项目架构探索</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2017-12-12</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa fa-android"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/Android/">#Android</a> <a class="fw3 ph1 dib" href="/tags/Architecture/">#Architecture</a> <a class="fw3 ph1 dib" href="/tags/内存优化/">#内存优化</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="Android-Architecture"><a href="#Android-Architecture" class="headerlink" title="Android Architecture"></a>Android Architecture</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>该项目结合 MVP 与 Clean 架构思想，探索在 Android 项目上的最佳实践。</p>
+<p>遵循 <a href="https://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html" target="_blank" rel="noopener">Clean Architecture</a> 的原则。</p>
+<p><img src="https://github.com/jeanboydev/Android-Architecture/blob/master/resources/images/android-architecture.png?raw=true" alt="architecture"></p>
+<ul>
+<li>数据层（Data Layer）：加入数据转换层（Mapper）将服务端数据模型（Entity）与本地数据模型（Model）解耦。</li>
+<li>业务层（Domain Layer）：按模块划分业务，具体业务交给 Usecase 处理。</li>
+<li>显示层（View Layer）： Presenter 不再与 Activity/Fragment 一一对应，Presenter 按照业务模块划分功能，大大提高 Presenter 的复用性。Activity/Fragment 中可以实现多个 View，持有多个 Presenter 来完成业务逻辑。</li>
+</ul>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><table>
+<thead>
+<tr>
+<th>分支</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/jeanboydev/Android-Architecture" target="_blank" rel="noopener">master</a></td>
+<td>演示了 Model-View-Presenter（MVP）+ Clean 架构，提供一些基类，状态栏沉浸适配等</td>
+</tr>
+<tr>
+<td><a href="https://github.com/jeanboydev/Android-Architecture/tree/develop" target="_blank" rel="noopener">develop</a></td>
+<td>使用 <a href="https://github.com/JakeWharton/butterknife" target="_blank" rel="noopener">butterknife</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/jeanboydev/Android-Architecture/tree/develop-dagger" target="_blank" rel="noopener">develop-dagger</a></td>
+<td>加入 <a href="https://github.com/google/dagger" target="_blank" rel="noopener">dagger</a> 的支持</td>
+</tr>
+<tr>
+<td><a href="https://github.com/jeanboydev/Android-Architecture/tree/develop-dagger-rxjava" target="_blank" rel="noopener">develop-dagger-rxjava</a></td>
+<td>加入 <a href="https://github.com/ReactiveX/RxJava" target="_blank" rel="noopener">rxjava</a> 的支持</td>
+</tr>
+</tbody>
+</table>
+<h2 id="数据层（Data-Layer）"><a href="#数据层（Data-Layer）" class="headerlink" title="数据层（Data Layer）"></a>数据层（Data Layer）</h2><p><img src="https://github.com/jeanboydev/Android-Architecture/blob/master/resources/images/android-architecture-data.png?raw=true" alt="data.png"></p>
+<p>数据层（Data Layer）主要是数据获取与数据缓存策略的处理。</p>
+<p>比如：第一次获取到数据，缓存到持久层（持久层可以放入数据库，SharedPreferences，文件或者其他形式）和内存中；第二次获取数据时应优先从内存中读取，其次是持久层，若本地缓存失效则直接从远程服务端获取，然后缓存到本地。</p>
+<p>具体实现参见 <a href="https://github.com/jeanboydev/Android-Architecture/blob/master/data/src/main/java/com/jeanboy/data/repository/UserRepository.java" target="_blank" rel="noopener">UserRepository</a></p>
+<h2 id="业务层（Domain-Layer）"><a href="#业务层（Domain-Layer）" class="headerlink" title="业务层（Domain Layer）"></a>业务层（Domain Layer）</h2><p><img src="https://github.com/jeanboydev/Android-Architecture/blob/master/resources/images/android-architecture-domain-data.png?raw=true" alt="domain-data"></p>
+<p>业务层（Domain Layer）主要是根据业务需求来操作数据的逻辑。业务层将每条需求交个 Usecase 来处理，Usecase 通过 Repository 来获取数据。业务层与数据层解耦，方便扩展与测试。</p>
+<p>具体实现参见 <a href="https://github.com/jeanboydev/Android-Architecture/blob/master/domain/src/main/java/com/jeanboy/domain/usecase/LoginRemoteTask.java" target="_blank" rel="noopener">LoginRemoteTask</a></p>
+<h2 id="显示层（View-Layer）"><a href="#显示层（View-Layer）" class="headerlink" title="显示层（View Layer）"></a>显示层（View Layer）</h2><p><img src="https://github.com/jeanboydev/Android-Architecture/blob/master/resources/images/android-architecture-view-domain.png?raw=true" alt="view-domain"></p>
+<p>显示层（View Layer）主要是数据的展示与更新操作。显示层通过 Presenter 与业务层交互，Activity / Fragment 与 Presenter 解耦，将业务实现由 Presenter 组合而成。Presenter 与 View 对应，Activity / Fragment 由多个 View 管理。</p>
+<p>具体实现参见 <a href="https://github.com/jeanboydev/Android-Architecture/blob/master/app/src/main/java/com/jeanboy/app/architecture/ui/activity/LoginActivity.java" target="_blank" rel="noopener">LoginActivity</a></p>
+<h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><p><img src="https://github.com/jeanboydev/Android-Architecture/blob/master/resources/images/android_project.png?raw=true" alt="architecture"></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://github.com/Blankj/AndroidStandardDevelop" target="_blank" rel="noopener">Android 开发规范</a></li>
+<li><a href="https://github.com/googlesamples/android-architecture" target="_blank" rel="noopener">android-architecture</a></li>
+<li><a href="https://github.com/android10/Android-CleanArchitecture" target="_blank" rel="noopener">Android-CleanArchitecture</a></li>
+</ul>
+<h2 id="扫一扫关注我的公众账号"><a href="#扫一扫关注我的公众账号" class="headerlink" title="扫一扫关注我的公众账号"></a>扫一扫关注我的公众账号</h2><p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/wechat/qrcode_for_gh_26eef6f9e7c1_258.jpg?raw=true" width="256" height="256"></p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/Android/">#Android</a> <a class="fw3 ph1 dib" href="/tags/Architecture/">#Architecture</a> <a class="fw3 ph1 dib" href="/tags/内存优化/">#内存优化</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="https://avatars2.githubusercontent.com/u/5093954?s=460&v=4" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="曹建波（@jeanboy）">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            嗨，我是曹建波（@jeanboy），一名来自中国的 Android / iOS / 前端 开发者。<br/><br/>现居北京，专注于移动应用开发，热爱开源，热爱分享。
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>分类</h3>
+    
+        <p>
+            <a href="/categories/Android/">Android</a>
+        </p>
+    
+</div>
+
+
+                        <hr class="dn-l mw4 black-50 mt5" />
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p>
+            <a href="/2018/07/06/jvm-memory/">Java 虚拟机内存分配机制</a>
+        </p>
+    
+        <p>
+            <a href="/2018/06/16/jvm-gc/">Java 虚拟机垃圾回收机制</a>
+        </p>
+    
+        <p>
+            <a href="/2018/05/22/internet-http-https/">一篇文章看明白 HTTP，HTTPS，SSL/TSL 之间的关系</a>
+        </p>
+    
+        <p>
+            <a href="/2018/05/05/internet-tcp-ip/">一篇文章看明白 TCP/IP，TCP，UDP，IP，Socket 之间的关系</a>
+        </p>
+    
+        <p>
+            <a href="/2018/04/21/android-service-start/">一篇文章看明白 Android Service 启动过程</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5 bg-2">
+    <div class="mv8">
+        <div class="center tc">
+            
+                <div class="dib mh3">
+                    <a class="f3 f2-ns white dim" href="https://github.com/jeanboydev" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
+                
+                <div class="dib mh3">
+                    <a class="f3 f2-ns white dim" href="mailto:jeanboy@foxmail.com" target="_blank">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </div>
+                
+        </div>
+        <div class="f6 f5-ns center tc white pt5 fw3">
+            ©2018 Jeanboy All Rights Reserved | Design & Hexo
+        </div>
+    </div>
+</div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

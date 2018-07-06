@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="嗨，我是曹建波（@jeanboy），一名来自中国的 Android / iOS / 前端 开发者。现居北京，专注于移动应用开发，热爱分享。">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="曹建波（@jeanboy）">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Android - 性能优化 内存优化"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="嗨，我是曹建波（@jeanboy），一名来自中国的 Android / iOS / 前端 开发者。现居北京，专注于移动应用开发，热爱分享。" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Jeanboy | 曹建波"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Android - 性能优化 内存优化 - Jeanboy | 曹建波</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Analytics -->
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121861403-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-121861403-1');
+    </script>
+    
+    
+    <!-- Baidu Analytics -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?63e553d8293bc74f1160b044738c6107";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    
+    <!-- google-site-verification -->
+    <meta name="google-site-verification" content="R8TtKySmf9yNtEuFKXO0c3YwtVbtTjJU6jWQrzlsxDM" />
+    <!-- baidu-site-verification -->
+    <meta name="baidu-site-verification" content="T8pesQWGrJ" />
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="Jeanboy | 曹建波">
+            <img src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg" class="dib h3" alt="Jeanboy | 曹建波">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="首页">
+                    首页
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="归档">
+                    归档
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags" 
+                    title="标签">
+                    标签
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/categories" 
+                    title="分类">
+                    分类
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/about" 
+                    title="关于我">
+                    关于我
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Android - 性能优化 内存优化</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2017-11-05</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa fa-android"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/Android/">#Android</a> <a class="fw3 ph1 dib" href="/tags/内存优化/">#内存优化</a> <a class="fw3 ph1 dib" href="/tags/性能优化/">#性能优化</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="Android-性能优化-内存优化"><a href="#Android-性能优化-内存优化" class="headerlink" title="Android - 性能优化 内存优化"></a>Android - 性能优化 内存优化</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h2 id="JVM-内存分配机制"><a href="#JVM-内存分配机制" class="headerlink" title="JVM 内存分配机制"></a>JVM 内存分配机制</h2><ul>
+<li>详见：<a href="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/JVM/JVM-内存分配机制.md" target="_blank" rel="noopener">JVM 内存分配机制</a></li>
+</ul>
+<h2 id="JVM-垃圾回收机制"><a href="#JVM-垃圾回收机制" class="headerlink" title="JVM 垃圾回收机制"></a>JVM 垃圾回收机制</h2><ul>
+<li>详见：<a href="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/JVM/JVM-垃圾回收机制.md" target="_blank" rel="noopener">JVM 垃圾回收机制</a></li>
+</ul>
+<h2 id="DVM-与-JVM-的区别"><a href="#DVM-与-JVM-的区别" class="headerlink" title="DVM 与 JVM 的区别"></a>DVM 与 JVM 的区别</h2><ul>
+<li>虚拟机区别</li>
+</ul>
+<p>Dalvik 虚拟机（DVM）是 Android 系统在 java虚拟机（JVM）基础上优化得到的，DVM 是基于寄存器的，而 JVM 是基于栈的，由于寄存器高效快速的特性，DVM 的性能相比 JVM 更好。</p>
+<ul>
+<li>字节码区别</li>
+</ul>
+<p>Dalvik 执行 <strong>.dex</strong> 格式的字节码文件，JVM 执行的是 <strong>.class</strong> 格式的字节码文件，Android 程序在编译之后产生的 .class 文件会被 aapt 工具处理生成 R.class 等文件，然后 dx 工具会把 .class 文件处理成 .dex 文件，最终资源文件和 .dex 文件等打包成 .apk 文件。</p>
+<h2 id="OOM-代码相关优化"><a href="#OOM-代码相关优化" class="headerlink" title="OOM 代码相关优化"></a>OOM 代码相关优化</h2><p>当应用程序申请的 java heap 空间超过 Dalvik VM HeapGrowthLimit 时溢出。 OOM 并不代表内存不足，只要申请的 heap 超过 Dalvik VM HeapGrowthLimit 时，即使内存充足也会溢出。 效果是能让较多进程常驻内存。</p>
+<ul>
+<li>Bitmap</li>
+</ul>
+<p>Bitmap 非常消耗内存，而且在 Android 中，读取 bitmap 时， 一般分配给虚拟机的图片堆栈只有 8M，所以经常造成 OOM 问题。 所以有必要针对 Bitmap 的使用作出优化：</p>
+<ol>
+<li>图片显示：加载合适尺寸的图片，比如显示缩略图的地方不要加载大图。</li>
+<li>图片回收：使用完 bitmap，及时使用 Bitmap.recycle() 回收。</li>
+</ol>
+<blockquote>
+<p>问题：Android 不是自身具备垃圾回收机制吗？此处为何要手动回收？</p>
+<p>Bitmap 对象不是 new 生成的，而是通过 BitmapFactory 生产的。 而且通过源码可发现是通过调用 JNI 生成 Bitma p对象（nativeDecodeStream()等方法）。 所以，加载 bitmap 到内存里包括两部分，Dalvik 内存和 Linux kernel 内存。 前者会被虚拟机自动回收。 而后者必须通过 recycle() 方法，内部调用 nativeRecycle() 让 linux kernel 回收。</p>
+</blockquote>
+<ol start="3">
+<li>捕获 OOM 异常：程序中设定如果发生 OOM 的应急处理方式。</li>
+<li>图片缓存：内存缓存、硬盘缓存等</li>
+<li>图片压缩：直接使用 ImageView 显示 Bitmap 时会占很多资源，尤其当图片较大时容易发 生OOM。 可以使用 BitMapFactory.Options 对图片进行压缩。</li>
+<li>图片像素：android 默认颜色模式为 ARGB_8888，显示质量最高，占用内存最大。 若要求不高时可采用 RGB_565 等模式。 </li>
+<li>图片大小：图片 长度×宽度×单位像素 所占据字节数。</li>
+</ol>
+<p>我们知道 ARGB 指的是一种色彩模式，里面 A 代表 Alpha，R 表示 Red，G 表示 Green，B 表示 Blue。 所有的可见色都是由红绿蓝组成的，所以红绿蓝又称为三原色，每个原色都存储着所表示颜色的信息值,下表中对四种颜色模式的详细描述，以及每种色彩模式占用的字节数。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">模式</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">占用字节</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ALPHA</td>
+<td style="text-align:left">Alpha 由 8 位组成</td>
+<td style="text-align:left">1B</td>
+</tr>
+<tr>
+<td style="text-align:left">ARGB_4444</td>
+<td style="text-align:left">4 个 4 位组成 16 位，每个色彩元素站 4 位</td>
+<td style="text-align:left">2B</td>
+</tr>
+<tr>
+<td style="text-align:left">ARGB_8888</td>
+<td style="text-align:left">4 个 8 为组成 32 位，每个色彩元素站 8 位（默认）</td>
+<td style="text-align:left">4B</td>
+</tr>
+<tr>
+<td style="text-align:left">RGB_565</td>
+<td style="text-align:left">R 为 5 位，G 为 6 位，B 为 5 位共 16 位，没有Alpha</td>
+<td style="text-align:left">2B</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>对象引用类型</li>
+</ul>
+<ol>
+<li>强引用（Strong Reference）:JVM宁愿抛出OOM，也不会让GC回收的对象 </li>
+<li>软引用（Soft Reference） ：只有内存不足时，才会被GC回收。 </li>
+<li>弱引用（weak Reference）：在GC时，一旦发现弱引用，立即回收 </li>
+<li>虚引用（Phantom Reference）：任何时候都可以被 GC 回收，当垃圾回收器准备回收一个对象时，如果发现它还有虚引用，就会在回收对象的内存之前，把这个虚引用加入到与之关联的引用队列中。 程序可以通过判断引用队列中是否存在该对象的虚引用，来了解这个对象是否将要被回收。 可以用来作为 GC 回收 Object 的标志。 </li>
+</ol>
+<ul>
+<li>缓存池</li>
+</ul>
+<p>对象池：如果某个对象在创建时，需要较大的资源开销，那么可以将其放入对象池，即将对象保存起来，下次需要时直接取出使用，而不用再次创建对象。当然，维护对象池也需要一定开销，故要衡量。</p>
+<p>线程池：与对象池差不多，将线程对象放在池中供反复使用，减少反复创建线程的开销。</p>
+<h2 id="内存泄露相关优化"><a href="#内存泄露相关优化" class="headerlink" title="内存泄露相关优化"></a>内存泄露相关优化</h2><p>当一个对象已经不需要再使用了，本该被回收时，而有另外一个正在使用的对象持有它的引用从而导致它不能被回收，这导致本该被回收的对象不能被回收而停留在堆内存中，这就产生了内存泄漏。</p>
+<ul>
+<li>单例造成的内存泄漏</li>
+</ul>
+<p>单例模式非常受开发者的喜爱，不过使用的不恰当的话也会造成内存泄漏，由于单例的静态特性使得单例的生命周期和应用的生命周期一样长，这就说明了如果一个对象已经不需要使用了，而单例对象还持有该对象的引用，那么这个对象将不能被正常回收，这就导致了内存泄漏。</p>
+<p>如下这个典例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AppManager</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> AppManager instance;</span><br><span class="line">    <span class="keyword">private</span> Context context;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">AppManager</span><span class="params">(Context context)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.context = context;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> AppManager <span class="title">getInstance</span><span class="params">(Context context)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (instance != <span class="keyword">null</span>) &#123;</span><br><span class="line">            instance = <span class="keyword">new</span> AppManager(context);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这是一个普通的单例模式，当创建这个单例的时候，由于需要传入一个 Context，所以这个 Context 的生命周期的长短至关重要：</p>
+<ol>
+<li>传入的是 Application 的 Context：这将没有任何问题，因为单例的生命周期和 Application 的一样长。</li>
+<li>传入的是 Activity 的 Context：当这个 Context 所对应的 Activity 退出时，由于该 Context 和 Activity 的生命周期一样长（Activity 间接继承于 Context），所以当前 Activity 退出时它的内存并不会被回收，因为单例对象持有该 Activity 的引用。</li>
+</ol>
+<p>所以正确的单例应该修改为下面这种方式：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AppManager</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> AppManager instance;</span><br><span class="line">    <span class="keyword">private</span> Context context;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">AppManager</span><span class="params">(Context context)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.context = context.getApplicationContext();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> AppManager <span class="title">getInstance</span><span class="params">(Context context)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (instance != <span class="keyword">null</span>) &#123;</span><br><span class="line">            instance = <span class="keyword">new</span> AppManager(context);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样不管传入什么 Context 最终将使用 Application 的 Context，而单例的生命周期和应用的一样长，这样就防止了内存泄漏。</p>
+<ul>
+<li>非静态内部类创建静态实例造成的内存泄漏</li>
+</ul>
+<p>有的时候我们可能会在启动频繁的Activity中，为了避免重复创建相同的数据资源，可能会出现这种写法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> TestResource mResource = <span class="keyword">null</span>;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">        <span class="keyword">if</span>(mResource == <span class="keyword">null</span>)&#123;</span><br><span class="line">            mResource = <span class="keyword">new</span> TestResource();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//...</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">TestResource</span> </span>&#123;</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样就在 Activity 内部创建了一个非静态内部类的单例，每次启动 Activity 时都会使用该单例的数据，这样虽然避免了资源的重复创建，不过这种写法却会造成内存泄漏，因为非静态内部类默认会持有外部类的引用，而又使用了该非静态内部类创建了一个静态的实例，该实例的生命周期和应用的一样长，这就导致了该静态实例一直会持有该 Activity 的引用，导致 Activity 的内存资源不能正常回收。</p>
+<p>正确的做法为：</p>
+<p>将该内部类设为静态内部类或将该内部类抽取出来封装成一个单例，如果需要使用 Context，请使用 ApplicationContext。</p>
+<ul>
+<li>Handler 造成的内存泄漏</li>
+</ul>
+<p>Handler 的使用造成的内存泄漏问题应该说最为常见了，平时在处理网络任务或者封装一些请求回调等 api 都应该会借助 Handler 来处理，对于 Handler 的使用代码编写一不规范即有可能造成内存泄漏，如下示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> Handler mHandler = <span class="keyword">new</span> Handler() &#123;</span><br><span class="line">	    <span class="meta">@Override</span></span><br><span class="line">	    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">handleMessage</span><span class="params">(Message msg)</span> </span>&#123;</span><br><span class="line">	    <span class="comment">//...</span></span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">        loadData();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">loadData</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//...request</span></span><br><span class="line">        Message message = Message.obtain();</span><br><span class="line">        mHandler.sendMessage(message);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这种创建 Handler 的方式会造成内存泄漏，由于 mHandler 是 Handler 的非静态匿名内部类的实例，所以它持有外部类 Activity 的引用，我们知道消息队列是在一个 Looper 线程中不断轮询处理消息，那么当这个 Activity 退出时消息队列中还有未处理的消息或者正在处理消息，而消息队列中的 Message 持有 mHandler 实例的引用，mHandler 又持有 Activity 的引用，所以导致该 Activity 的内存资源无法及时回收，引发内存泄漏，所以另外一种做法为：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> MyHandler mHandler = <span class="keyword">new</span> MyHandler(<span class="keyword">this</span>);</span><br><span class="line">    <span class="keyword">private</span> TextView mTextView ;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">MyHandler</span> <span class="keyword">extends</span> <span class="title">Handler</span> </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> WeakReference&lt;Context&gt; reference;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">MyHandler</span><span class="params">(Context context)</span> </span>&#123;</span><br><span class="line">        reference = <span class="keyword">new</span> WeakReference&lt;&gt;(context);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">handleMessage</span><span class="params">(Message msg)</span> </span>&#123;</span><br><span class="line">            MainActivity activity = (MainActivity) reference.get();</span><br><span class="line">            <span class="keyword">if</span>(activity != <span class="keyword">null</span>)&#123;</span><br><span class="line">            activity.mTextView.setText(<span class="string">""</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">        mTextView = (TextView)findViewById(R.id.textview);</span><br><span class="line">        loadData();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">loadData</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//...request</span></span><br><span class="line">        Message message = Message.obtain();</span><br><span class="line">        mHandler.sendMessage(message);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>创建一个静态 Handler 内部类，然后对 Handler 持有的对象使用弱引用，这样在回收时也可以回收 Handler 持有的对象，这样虽然避免了 Activity 泄漏，不过 Looper 线程的消息队列中还是可能会有待处理的消息，所以我们在 Activity 的 Destroy 时或者 Stop 时应该移除消息队列中的消息，更准确的做法如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> MyHandler mHandler = <span class="keyword">new</span> MyHandler(<span class="keyword">this</span>);</span><br><span class="line">    <span class="keyword">private</span> TextView mTextView ;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">MyHandler</span> <span class="keyword">extends</span> <span class="title">Handler</span> </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> WeakReference&lt;Context&gt; reference;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">MyHandler</span><span class="params">(Context context)</span> </span>&#123;</span><br><span class="line">        reference = <span class="keyword">new</span> WeakReference&lt;&gt;(context);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">handleMessage</span><span class="params">(Message msg)</span> </span>&#123;</span><br><span class="line">            MainActivity activity = (MainActivity) reference.get();</span><br><span class="line">            <span class="keyword">if</span>(activity != <span class="keyword">null</span>)&#123;</span><br><span class="line">            activity.mTextView.setText(<span class="string">""</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">        mTextView = (TextView)findViewById(R.id.textview);</span><br><span class="line">        loadData();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">loadData</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//...request</span></span><br><span class="line">        Message message = Message.obtain();</span><br><span class="line">        mHandler.sendMessage(message);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onDestroy</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onDestroy();</span><br><span class="line">        mHandler.removeCallbacksAndMessages(<span class="keyword">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用 mHandler.removeCallbacksAndMessages(null); 是移除消息队列中所有消息和所有的 Runnable。 当然也可以使用 mHandler.removeCallbacks(); 或 mHandler.removeMessages(); 来移除指定的 Runnable 和 Message。</p>
+<ul>
+<li>线程造成的内存泄漏</li>
+</ul>
+<p>对于线程造成的内存泄漏，也是平时比较常见的，异步任务和 Runnable 都是一个匿名内部类，因此它们对当前 Activity 都有一个隐式引用。 如果 Activity 在销毁之前，任务还未完成，那么将导致 Activity 的内存资源无法回收，造成内存泄漏。 正确的做法还是使用静态内部类的方式，如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">MyAsyncTask</span> <span class="keyword">extends</span> <span class="title">AsyncTask</span>&lt;<span class="title">Void</span>, <span class="title">Void</span>, <span class="title">Void</span>&gt; </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> WeakReference&lt;Context&gt; weakReference;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyAsyncTask</span><span class="params">(Context context)</span> </span>&#123;</span><br><span class="line">        weakReference = <span class="keyword">new</span> WeakReference&lt;&gt;(context);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> Void <span class="title">doInBackground</span><span class="params">(Void... params)</span> </span>&#123;</span><br><span class="line">        SystemClock.sleep(<span class="number">10000</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onPostExecute</span><span class="params">(Void aVoid)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onPostExecute(aVoid);</span><br><span class="line">        MainActivity activity = (MainActivity) weakReference.get();</span><br><span class="line">        <span class="keyword">if</span> (activity != <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="comment">//...</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">MyRunnable</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        SystemClock.sleep(<span class="number">10000</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//——————</span></span><br><span class="line"><span class="keyword">new</span> Thread(<span class="keyword">new</span> MyRunnable()).start();</span><br><span class="line"><span class="keyword">new</span> MyAsyncTask(<span class="keyword">this</span>).execute();</span><br></pre></td></tr></table></figure>
+<p>这样就避免了 Activity 的内存资源泄漏，当然在 Activity 销毁时候也应该取消相应的任务 AsyncTask::cancel()，避免任务在后台执行浪费资源。</p>
+<ul>
+<li>资源使用完未关闭</li>
+</ul>
+<p>BraodcastReceiver，ContentObserver，FileObserver，Cursor，Callback等在 Activity onDestroy 或者某类生命周期结束之后一定要 unregister 或者 close 掉，否则这个 Activity 类会被 system 强引用，不会被内存回收。</p>
+<p>不要直接对 Activity 进行直接引用作为成员变量，如果不得不这么做，请用 private WeakReference mActivity 来做，相同的，对于Service 等其他有自己声明周期的对象来说，直接引用都需要谨慎考虑是否会存在内存泄露的可能。</p>
+<h2 id="其他优化"><a href="#其他优化" class="headerlink" title="其他优化"></a>其他优化</h2><ul>
+<li>常用数据结构优化</li>
+</ul>
+<ol>
+<li>ArrayMap 及 SparseArray 是 android 的系统 API，是专门为移动设备而定制的。 用于在一定情况下取代 HashMap 而达到节省内存的目的。 对于 key 为 int 的 HashMap 尽量使用 SparceArray 替代，大概可以省 30% 的内存，而对于其他类型，ArrayMap 对内存的节省实际并不明显，10% 左右，但是数据量在 1000 以上时，查找速度可能会变慢。</li>
+<li>在有些时候，代码中会需要使用到大量的字符串拼接的操作，这种时候有必要考虑使用 StringBuilder 来替代频繁的 “+”。</li>
+</ol>
+<ul>
+<li>枚举</li>
+</ul>
+<p>Android 平台上枚举是比较争议的，在较早的 Android 版本，使用枚举会导致包过大，使用枚举甚至比直接使用 int 包的 size 大了 10 多倍。 在 stackoverflow 上也有很多的讨论, 大致意思是随着虚拟机的优化，目前枚举变量在 Android 平台性能问题已经不大，而目前 Android 官方建议，使用枚举变量还是需要谨慎，因为枚举变量可能比直接用 int 多使用 2 倍的内存。</p>
+<ul>
+<li>View 复用</li>
+</ul>
+<ol>
+<li>使用 ListView 时 getView 里尽量复用 conertView，同时因为 getView 会频繁调用，要避免频繁地生成对象。 优先考虑使用 RecyclerView 代替 ListView。</li>
+<li>重复的布局优先使用 <include>，使用 <merge> 减少 view 的层级，对于可以延迟初始化的页面，使用 <viewstub>。</viewstub></merge></include></li>
+</ol>
+<ul>
+<li>谨慎使用多进程</li>
+</ul>
+<p>现在很多 App 都不是单进程，为了保活，或者提高稳定性都会进行一些进程拆分，而实际上即使是空进程也会占用内存(1M 左右)，对于使用完的进程，服务都要及时进行回收。</p>
+<ul>
+<li>系统资源</li>
+</ul>
+<p>尽量使用系统组件，图片甚至控件的 id。 例如：@android:color/xxx，@android:style/xxx。</p>
+<h2 id="使用工具检查内存泄漏"><a href="#使用工具检查内存泄漏" class="headerlink" title="使用工具检查内存泄漏"></a>使用工具检查内存泄漏</h2><p>即使在编码时将上述情况都考虑了，往往会有疏忽的地方，更何况通常情况下是团队开发。 所以不仅仅要在编码时考虑内存优化的情况，当出现内存泄漏时，更有效更准确的定位问题才是最重要的方式。 内存泄漏不像 bug，排查起来相对复杂一些，下面介绍下常用的检查方式。</p>
+<h2 id="使用-Lint-代码静态检查"><a href="#使用-Lint-代码静态检查" class="headerlink" title="使用 Lint 代码静态检查"></a>使用 Lint 代码静态检查</h2><p>Lint 是 Android Studio 自带的工具，使用很简单找到 <strong>Analyze</strong> -&gt; <strong>Inspect Code</strong> 然后选择想要扫面的区域即可。</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_performance/memory_lint1.jpg?raw=true?raw=true" alt="memory_lint1"></p>
+<p>选择 Lint 扫描区域。</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_performance/memory_lint2.jpg?raw=true" alt="memory_lint2"></p>
+<p>对可能引起性能问题的代码，Lint 都会进行提示。</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_performance/memory_lint3.jpg?raw=true" alt="memory_lint3"></p>
+<h2 id="使用-Android-Studio-自带的-Monitor-Memory-检查"><a href="#使用-Android-Studio-自带的-Monitor-Memory-检查" class="headerlink" title="使用 Android Studio 自带的 Monitor Memory 检查"></a>使用 Android Studio 自带的 Monitor Memory 检查</h2><p>一般在 Android Studio 的底部可以找到 Android Monitor。</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_performance/memory_ast_1.jpg?raw=true" alt="Monitor Memory 1"></p>
+<p>可以看到当前 App的内存变动比较大，很有可能出现了内存泄漏。 点击 Dump Java Heap，等一段时间会自动生成 Heap Snapshot 文件。</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_performance/memory_ast_2.jpg?raw=true" alt="Monitor Memory 2"></p>
+<p>在 Captures 中可以找到 hprof 文件。</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_performance/memory_ast_3.jpg?raw=true" alt="Monitor Memory 3"></p>
+<p>在右侧找到 Analyzer Tasks 并打开，点击图中 Perform Analysis 按钮开始分析。</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_performance/memory_ast_4.jpg?raw=true" alt="Monitor Memory 4"></p>
+<p>通过分析结果可以看到 TestActivity 泄漏了，从左侧 Reference Tree 中可以看到是 TestActivity 中的 context 泄露了。</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_performance/memory_ast_5.jpg?raw=true" alt="Monitor Memory 5"></p>
+<p>我们来看下代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Context context;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_test);</span><br><span class="line"></span><br><span class="line">        context = <span class="keyword">this</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>代码中 context 为静态的引用了当前 Activity 造成了当前 Activity 无法释放。</p>
+<p>一般的通过 使用 Android Studio 自带的 Monitor Memory 可以定位到内存泄漏所在的类，更详细的信息需要借助 Memory Analyzer Tool（MAT）工具。</p>
+<h2 id="使用-Memory-Analyzer-Tool-检查"><a href="#使用-Memory-Analyzer-Tool-检查" class="headerlink" title="使用 Memory Analyzer Tool 检查"></a>使用 Memory Analyzer Tool 检查</h2><p>首先下载 Memory Analyzer Tool <a href="http://www.eclipse.org/mat/downloads.php" target="_blank" rel="noopener">下载地址</a></p>
+<p>在 Android Studio 中先将 hprof 文件导出为 MAT 可以识别的 hprof 文件。</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_performance/memory_mat1.jpg?raw=true" alt="MAT1"></p>
+<p>打开刚才导出的文件。</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_performance/memory_mat2.jpg?raw=true" alt="MAT2"></p>
+<p>经过分析后会显示如下，Leak Suspectss 是一个关于内存泄露猜想的饼图，Problem Suspect 1 是泄露猜想的描述。</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_performance/memory_mat3.jpg?raw=true" alt="MAT3"></p>
+<p>Overview 是一个概况图，把内存的消耗以饼状图形式显示出来，鼠标在每个饼块区域划过或者点击，就会在 Inspector 栏目显示这块区域的相关信息。 MAT 从多角度提供了内存分析，其中包括 Histogram、 Dominator Tree、 Leak Suspects 和 Top consumers 等。</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_performance/memory_mat4.jpg?raw=true" alt="MAT4"></p>
+<p>这里我们使用 Histogram 进行分析，切换到 Histogram 页面。 这个页面主要有 4 个列，Class Name、 Objects、 Shallow Heap 和 Retained Heap。 其中 Class Name 是全类名，Objects 是这个类的对象实例个数。 Shallow Heap 是对象本身占用内存大小，非数组的常规对象，本身内存占用很小，所以这个对泄露分析作用不大。 Retained Heap 指当前对象大小和当前对象能直接或间接引用的对象大小的总和，这个栏目是分析重点。</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_performance/memory_mat5.jpg?raw=true" alt="MAT5"></p>
+<p>内存分析是分析的整个系统的内存泄露，而我们只要查找我们 App 的内存泄露情况。 这无疑增加了很多工作，不过幸亏 Histogram 支持正则表达式查找，在 Regex 中输入我们的包名进行过滤，直奔和我们 App 有关的内存泄露。</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_performance/memory_mat6.jpg?raw=true" alt="MAT6"></p>
+<p>过滤后就显示了我们 App 相关内存信息，按 Retained Heap 大小排列下，发现 MainActivity 和 TestActivity 这两个类问题比较大。 TestActivity 的问题更突出些，所以先从 TestActivity 下手。</p>
+<p>首先看下是哪里的引用导致了 TestActivity 不能被 GC 回收。 右键使用 <strong>Merge Shortest Paths to GC Roots</strong> 显示距 GC Root 最短路径，当然选择过程中要排除软引用和弱引用，因为这些标记的一般都是可以被回收的。</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_performance/memory_mat7.jpg?raw=true" alt="MAT7"></p>
+<p>进入结果页查看。</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_performance/memory_mat8.jpg?raw=true" alt="MAT8"></p>
+<p>可以看到 TestActivity 不能被 GC 回收是因为 context 没有释放的原因。 我们再来看下代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Context context;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_test);</span><br><span class="line"></span><br><span class="line">        context = <span class="keyword">this</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="使用-LeakCanary-检查"><a href="#使用-LeakCanary-检查" class="headerlink" title="使用 LeakCanary 检查"></a>使用 LeakCanary 检查</h2><p>项目地址：<a href="https://github.com/square/leakcanary" target="_blank" rel="noopener">https://github.com/square/leakcanary</a></p>
+<p>使用方式很简单，参考项目里面的介绍即可。</p>
+<p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/android_performance/memory_leak_test.jpg?raw=true" alt="LeakCanary"></p>
+<h2 id="ANR"><a href="#ANR" class="headerlink" title="ANR"></a>ANR</h2><ul>
+<li>什么是 ANR</li>
+</ul>
+<ol>
+<li>ANR:Application Not Responding，即应用无响应。</li>
+<li>为用户在主线程长时间被阻塞是提供交互，提高用户体验。</li>
+<li>Android 系统自身的一种检测机制。</li>
+</ol>
+<ul>
+<li>ANR 的类型</li>
+</ul>
+<p>ANR 一般有三种类型：</p>
+<ol>
+<li>KeyDispatchTimeout(5 seconds) : 主要类型按键或触摸事件在特定时间内无响应</li>
+<li>BroadcastTimeout(10 seconds) : BroadcastReceiver 在特定时间内无法处理完成</li>
+<li>ServiceTimeout(20 seconds) : 小概率类型 Service 在特定的时间内无法处理完成</li>
+</ol>
+<ul>
+<li>ANR 产生的原因</li>
+</ul>
+<p>超时时间的计数一般是从按键分发给 app 开始。 超时的原因一般有两种：</p>
+<ol>
+<li>当前的事件没有机会得到处理（即 UI 线程正在处理前一个事件，没有及时的完成或者 looper 被某种原因阻塞住了）</li>
+<li>当前的事件正在处理，但没有及时完成。</li>
+</ol>
+<ul>
+<li>ANR 出现流程分析</li>
+</ul>
+<ol>
+<li>输入时间响应超时导致ANR流程</li>
+</ol>
+<p>在系统输入管理服务进程（InputManagerService）中有一个线程（InputDispathcerThread）专门管理输入事件的分发，在该线程处理输入事件的过程中，回调用 InputDispatcher 对象方法不断的检测处理过程是否超时，一旦超时，则会通过一些列的回调调用 InputMethod 对象的 notifyANR 方法，其会最终出发 AMS 中 handler 对象的 SHOW_NOT_RESPONDING_MSG 这个事件，显示ANR对话框。</p>
+<ol start="2">
+<li>广播发生ANR流程</li>
+</ol>
+<p>广播分为三类：普通的，有序的，异步的。 只有有序（ordered）的广播才会发生超时，而在 AndroidManifest 中注册的广播都会被当做有序广播来处理，会被放在广播的队列中串行处理。 AMS 在处理广播队列时，会设置一个超时时间，当处理一个广播达到超时时间的限制时，就会触发 BroadcastQueue 类对象的 processNextBroadcast 方法来判断是否超时，如果超时，就会终止该广播，触发ANR对话框。</p>
+<ol start="3">
+<li>UI线程</li>
+</ol>
+<p>UI 线程主要包括如下：</p>
+<p>Activity : onCreate(), onResume(), onDestroy(), onKeyDown(), onClick(), etc 生命周期方法里。<br>AsyncTask : onPreExecute(), onProgressUpdate(), onPostExecute(), onCancel, etc 这些异步更改 UI 界面的方法里。<br>Mainthread handler : handleMessage(), post*(runnable r), getMainLooper(), etc 通过 handler 发送消息到主线程的 looper，即占用主线程 looper 的。</p>
+<ul>
+<li>ANR 执行流程</li>
+</ul>
+<p>了解 ANR 执行流程有利于我们制定 ANR 监控策略和获取 ANR 的相关信息，ANR 的执行步骤如下：</p>
+<ol>
+<li>系统捕获到 ANR 发生；</li>
+<li>Process 依次向本进程及其他正在运行的进程发送 Linux 信号量 3；</li>
+<li>进程接收到 Linux 信号量，并向 /data/anr/traces.txt 中写入进程信息；</li>
+<li>Log 日志打印 ANR 信息；</li>
+<li>进程进入 ANR 状态（此时可以获取到进程 ANR 信息);</li>
+<li>弹出 ANR 提示框；</li>
+<li>提示框消失，进程回归正常状态。</li>
+</ol>
+<p>由于向 /data/anr/traces.txt 文件中写入信息耗时较长，从 Input ANR 触发到弹出 ANR 提示框一般在 10s 左右（不同 rom 时间不同）。</p>
+<ul>
+<li>发生 ANR 如何定位</li>
+</ul>
+<p>当 App 的进程发生 ANR 时，系统让活跃的 Top 进程都进行了一下 dump，进程中的各种 Thread 就都 dump 到这个 trace 文件里了，所以 trace 文件中包含了每一条线程的运行时状态。 traces.txt 的文件放在 /data/anr/ 下. 可以通过 adb 命令将其导出到本地:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ adb pull data/anr/traces.txt .</span><br></pre></td></tr></table></figure>
+<p>通过分析 traces.txt 文件，查找 App 包名关键信息来定位 ANR。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://ivonhoe.github.io/2017/03/22/Bitmap&amp;Memory/" target="_blank" rel="noopener">Android Bitmap的内存大小是如何计算的？</a></li>
+<li><a href="http://hanhailong.com/2015/12/27/Android性能优化之常见的内存泄漏/" target="_blank" rel="noopener">Android性能优化之常见的内存泄漏</a></li>
+<li><a href="http://www.jianshu.com/p/216b03c22bb8" target="_blank" rel="noopener">使用新版Android Studio检测内存泄露和性能</a></li>
+<li><a href="https://www.diycode.cc/topics/475" target="_blank" rel="noopener">Android 应用内存泄漏的定位、分析与解决策略</a></li>
+<li><a href="http://rayleeya.iteye.com/blog/1955657" target="_blank" rel="noopener">Android 系统稳定性 - ANR</a></li>
+</ul>
+<h2 id="扫一扫关注我的公众账号"><a href="#扫一扫关注我的公众账号" class="headerlink" title="扫一扫关注我的公众账号"></a>扫一扫关注我的公众账号</h2><p><img src="https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/resources/images/wechat/qrcode_for_gh_26eef6f9e7c1_258.jpg?raw=true" width="256" height="256"></p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/Android/">#Android</a> <a class="fw3 ph1 dib" href="/tags/内存优化/">#内存优化</a> <a class="fw3 ph1 dib" href="/tags/性能优化/">#性能优化</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="https://avatars2.githubusercontent.com/u/5093954?s=460&v=4" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="曹建波（@jeanboy）">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            嗨，我是曹建波（@jeanboy），一名来自中国的 Android / iOS / 前端 开发者。<br/><br/>现居北京，专注于移动应用开发，热爱开源，热爱分享。
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>分类</h3>
+    
+        <p>
+            <a href="/categories/Android/">Android</a>
+        </p>
+    
+</div>
+
+
+                        <hr class="dn-l mw4 black-50 mt5" />
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p>
+            <a href="/2018/07/06/jvm-memory/">Java 虚拟机内存分配机制</a>
+        </p>
+    
+        <p>
+            <a href="/2018/06/16/jvm-gc/">Java 虚拟机垃圾回收机制</a>
+        </p>
+    
+        <p>
+            <a href="/2018/05/22/internet-http-https/">一篇文章看明白 HTTP，HTTPS，SSL/TSL 之间的关系</a>
+        </p>
+    
+        <p>
+            <a href="/2018/05/05/internet-tcp-ip/">一篇文章看明白 TCP/IP，TCP，UDP，IP，Socket 之间的关系</a>
+        </p>
+    
+        <p>
+            <a href="/2018/04/21/android-service-start/">一篇文章看明白 Android Service 启动过程</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5 bg-2">
+    <div class="mv8">
+        <div class="center tc">
+            
+                <div class="dib mh3">
+                    <a class="f3 f2-ns white dim" href="https://github.com/jeanboydev" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
+                
+                <div class="dib mh3">
+                    <a class="f3 f2-ns white dim" href="mailto:jeanboy@foxmail.com" target="_blank">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </div>
+                
+        </div>
+        <div class="f6 f5-ns center tc white pt5 fw3">
+            ©2018 Jeanboy All Rights Reserved | Design & Hexo
+        </div>
+    </div>
+</div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

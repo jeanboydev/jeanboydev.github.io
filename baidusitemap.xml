@@ -4,18 +4,122 @@
 
     
   <url>
-    <loc>http://jeanboy.cn/2017/06/15/android-update-to-sutdio-3/</loc>
-    <lastmod>2018-07-06T08:00:44.000Z</lastmod>
+    <loc>http://jeanboy.cn/2018/07/06/jvm-memory/</loc>
+    <lastmod>2018-07-06T09:33:57.800Z</lastmod>
     <data>
         <display>
-        <title>Android Studio 3.0 升级指南</title>
-        <pubTime>2017-06-15T08:10:44.000Z</pubTime>
+        <title>Java 虚拟机内存分配机制</title>
+        <pubTime>2018-07-06T07:10:44.000Z</pubTime>
+        
+        <tag>Java 虚拟机</tag>
+         
+        <tag>内存分配机制</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java 虚拟机" url="http://jeanboy.cn/categories/Java-%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeanboy.cn/2018/06/16/jvm-gc/</loc>
+    <lastmod>2018-07-06T09:33:55.223Z</lastmod>
+    <data>
+        <display>
+        <title>Java 虚拟机垃圾回收机制</title>
+        <pubTime>2018-06-16T07:10:44.000Z</pubTime>
+        
+        <tag>Java 虚拟机</tag>
+         
+        <tag>垃圾回收机制</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java 虚拟机" url="http://jeanboy.cn/categories/Java-%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeanboy.cn/2018/05/05/internet-tcp-ip/</loc>
+    <lastmod>2018-07-06T09:29:08.012Z</lastmod>
+    <data>
+        <display>
+        <title>一篇文章看明白 TCP/IP，TCP，UDP，IP，Socket 之间的关系</title>
+        <pubTime>2018-05-05T07:10:44.000Z</pubTime>
+        
+        <tag>网络基础</tag>
+         
+        <tag>TCP/IP</tag>
+         
+        <tag>TCP</tag>
+         
+        <tag>UDP</tag>
+         
+        <tag>IP</tag>
+         
+        <tag>Socket</tag>
+         
+         
+           
+             
+              <breadCrumb title="网络基础" url="http://jeanboy.cn/categories/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeanboy.cn/2018/05/22/internet-http-https/</loc>
+    <lastmod>2018-07-06T09:29:04.459Z</lastmod>
+    <data>
+        <display>
+        <title>一篇文章看明白 HTTP，HTTPS，SSL/TSL 之间的关系</title>
+        <pubTime>2018-05-22T07:10:44.000Z</pubTime>
+        
+        <tag>网络基础</tag>
+         
+        <tag>HTTP</tag>
+         
+        <tag>HTTPS</tag>
+         
+        <tag>SSL</tag>
+         
+        <tag>TSL</tag>
+         
+         
+           
+             
+              <breadCrumb title="网络基础" url="http://jeanboy.cn/categories/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeanboy.cn/2018/04/21/android-service-start/</loc>
+    <lastmod>2018-07-06T09:21:21.971Z</lastmod>
+    <data>
+        <display>
+        <title>一篇文章看明白 Android Service 启动过程</title>
+        <pubTime>2018-04-21T02:10:44.000Z</pubTime>
         
         <tag>Android</tag>
          
-        <tag>Android Studio</tag>
+        <tag>启动过程</tag>
          
-        <tag>Gradle</tag>
+        <tag>源码分析</tag>
+         
+        <tag>Service</tag>
          
          
            
@@ -28,18 +132,74 @@
 
     
   <url>
-    <loc>http://jeanboy.cn/2017/08/08/android-binder/</loc>
-    <lastmod>2018-07-06T08:00:16.000Z</lastmod>
+    <loc>http://jeanboy.cn/2018/03/08/android-surface-surfaceflinger/</loc>
+    <lastmod>2018-07-06T09:09:33.411Z</lastmod>
     <data>
         <display>
-        <title>Android - Binder 进程间通讯</title>
-        <pubTime>2017-08-08T10:10:44.000Z</pubTime>
+        <title>一篇文章看明白 Android 图形系统 Surface 与 SurfaceFlinger 之间的关系</title>
+        <pubTime>2018-03-08T02:10:44.000Z</pubTime>
         
         <tag>Android</tag>
          
-        <tag>Binder</tag>
+        <tag>源码分析</tag>
          
-        <tag>进程间通信</tag>
+        <tag>Surface</tag>
+         
+        <tag>SurfaceFlinger</tag>
+         
+        <tag>视图显示原理</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://jeanboy.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeanboy.cn/2018/02/11/android-activity-window-view/</loc>
+    <lastmod>2018-07-06T09:06:41.855Z</lastmod>
+    <data>
+        <display>
+        <title>一篇文章看明白 Activity 与 Window 与 View 之间的关系</title>
+        <pubTime>2018-02-11T02:10:44.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Activity</tag>
+         
+        <tag>源码分析</tag>
+         
+        <tag>Window</tag>
+         
+        <tag>View</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://jeanboy.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeanboy.cn/2018/01/04/android-activity-start/</loc>
+    <lastmod>2018-07-06T09:06:30.272Z</lastmod>
+    <data>
+        <display>
+        <title>一篇文章看明白 Android 从点击应用图标到界面显示的过程</title>
+        <pubTime>2018-01-04T02:10:44.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Activity</tag>
+         
+        <tag>启动过程</tag>
          
         <tag>源码分析</tag>
          
@@ -54,8 +214,132 @@
 
     
   <url>
+    <loc>http://jeanboy.cn/2017/12/12/android-arch/</loc>
+    <lastmod>2018-07-06T09:02:24.897Z</lastmod>
+    <data>
+        <display>
+        <title>Android 项目架构探索</title>
+        <pubTime>2017-12-12T04:10:44.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Architecture</tag>
+         
+        <tag>内存优化</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://jeanboy.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeanboy.cn/2017/10/01/android-performance-optimization-ui/</loc>
+    <lastmod>2018-07-06T08:59:25.910Z</lastmod>
+    <data>
+        <display>
+        <title>Android - 性能优化 UI优化</title>
+        <pubTime>2017-10-01T07:10:44.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>性能优化</tag>
+         
+        <tag>UI优化</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://jeanboy.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeanboy.cn/2017/11/05/android-performance-optimization-memory/</loc>
+    <lastmod>2018-07-06T08:59:05.101Z</lastmod>
+    <data>
+        <display>
+        <title>Android - 性能优化 内存优化</title>
+        <pubTime>2017-11-05T07:10:44.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>内存优化</tag>
+         
+        <tag>性能优化</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://jeanboy.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeanboy.cn/2017/09/09/android-bootloader/</loc>
+    <lastmod>2018-07-06T08:36:10.059Z</lastmod>
+    <data>
+        <display>
+        <title>一篇文章看明白 Android 系统启动时都干了什么</title>
+        <pubTime>2017-09-09T10:10:44.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>源码分析</tag>
+         
+        <tag>Bootloader</tag>
+         
+        <tag>开机过程</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://jeanboy.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeanboy.cn/2017/08/08/android-binder/</loc>
+    <lastmod>2018-07-06T08:36:09.796Z</lastmod>
+    <data>
+        <display>
+        <title>一篇文章了解相见恨晚的 Android Binder 进程间通讯</title>
+        <pubTime>2017-08-08T10:10:44.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>源码分析</tag>
+         
+        <tag>Binder</tag>
+         
+        <tag>进程间通信</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://jeanboy.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jeanboy.cn/2017/07/07/android-flavors/</loc>
-    <lastmod>2018-07-06T08:00:16.000Z</lastmod>
+    <lastmod>2018-07-06T08:36:07.709Z</lastmod>
     <data>
         <display>
         <title>Android - 多渠道打包最佳实践</title>
@@ -78,20 +362,16 @@
 
     
   <url>
-    <loc>http://jeanboy.cn/2017/09/09/android-bootloader/</loc>
-    <lastmod>2018-07-06T08:00:16.000Z</lastmod>
+    <loc>http://jeanboy.cn/2017/05/15/android-handler/</loc>
+    <lastmod>2018-07-06T08:36:05.574Z</lastmod>
     <data>
         <display>
-        <title>Android - 系统启动过程</title>
-        <pubTime>2017-09-09T10:10:44.000Z</pubTime>
+        <title>Android - Handler 消息机制</title>
+        <pubTime>2017-05-15T03:10:44.000Z</pubTime>
         
         <tag>Android</tag>
          
-        <tag>源码分析</tag>
-         
-        <tag>Bootloader</tag>
-         
-        <tag>开机过程</tag>
+        <tag>Handler</tag>
          
          
            
@@ -102,39 +382,10 @@
     </data>
     </url>
 
-    
-  <url>
-    <loc>http://jeanboy.cn/2017/06/06/download-android-sources-code-for-windows/</loc>
-    <lastmod>2018-07-06T07:59:11.000Z</lastmod>
-    <data>
-        <display>
-        <title>Windows 环境下载 Android 源码</title>
-        <pubTime>2017-06-06T08:10:44.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>Source Code</tag>
-         
-        <tag>Download</tag>
-         
-        <tag>源码下载</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://jeanboy.cn/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-    
     
   <url>
     <loc>http://jeanboy.cn/2017/05/08/android-ipc/</loc>
-    <lastmod>2018-07-05T03:12:41.000Z</lastmod>
+    <lastmod>2018-07-06T08:36:02.842Z</lastmod>
     <data>
         <display>
         <title>Android - IPC 多进程</title>
@@ -158,7 +409,7 @@
     
   <url>
     <loc>http://jeanboy.cn/2017/05/01/android-launch-mode-and-intent-filter/</loc>
-    <lastmod>2018-07-05T03:12:24.000Z</lastmod>
+    <lastmod>2018-07-06T08:35:59.414Z</lastmod>
     <data>
         <display>
         <title>Android - Activity LaunchMode 启动模式 & IntentFilter 匹配规则</title>
@@ -188,7 +439,7 @@
     
   <url>
     <loc>http://jeanboy.cn/2017/04/30/android-life-cycle/</loc>
-    <lastmod>2018-07-05T03:11:00.000Z</lastmod>
+    <lastmod>2018-07-06T08:35:57.394Z</lastmod>
     <data>
         <display>
         <title>Android - Activity 生命周期</title>
@@ -213,16 +464,66 @@
 
     
   <url>
-    <loc>http://jeanboy.cn/2017/05/15/android-handler/</loc>
-    <lastmod>2018-07-05T03:10:05.000Z</lastmod>
+    <loc>http://jeanboy.cn/2017/06/15/android-update-to-sutdio-3/</loc>
+    <lastmod>2018-07-06T08:35:54.966Z</lastmod>
     <data>
         <display>
-        <title>Android - Handler 消息机制</title>
-        <pubTime>2017-05-15T03:10:44.000Z</pubTime>
+        <title>Android Studio 3.0 升级指南</title>
+        <pubTime>2017-06-15T08:10:44.000Z</pubTime>
         
         <tag>Android</tag>
          
-        <tag>Handler</tag>
+        <tag>Android Studio</tag>
+         
+        <tag>Gradle</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://jeanboy.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeanboy.cn/2017/06/06/download-android-sources-code-for-windows/</loc>
+    <lastmod>2018-07-06T08:35:52.259Z</lastmod>
+    <data>
+        <display>
+        <title>Windows 环境下载 Android 源码</title>
+        <pubTime>2017-06-06T08:10:44.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Source Code</tag>
+         
+        <tag>Download</tag>
+         
+        <tag>源码下载</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://jeanboy.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeanboy.cn/2017/04/26/multi-screen-support/</loc>
+    <lastmod>2018-07-06T08:35:48.420Z</lastmod>
+    <data>
+        <display>
+        <title>Android - 屏幕适配全攻略</title>
+        <pubTime>2017-04-26T03:10:44.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>屏幕适配</tag>
          
          
            
@@ -236,7 +537,7 @@
     
   <url>
     <loc>http://jeanboy.cn/2017/04/28/decompile/</loc>
-    <lastmod>2018-07-05T03:09:15.000Z</lastmod>
+    <lastmod>2018-07-06T08:35:45.252Z</lastmod>
     <data>
         <display>
         <title>Android - 反编译指南</title>
@@ -258,25 +559,6 @@
     </url>
 
     
-  <url>
-    <loc>http://jeanboy.cn/2017/04/26/multi-screen-support/</loc>
-    <lastmod>2018-07-04T03:53:46.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android - 屏幕适配全攻略</title>
-        <pubTime>2017-04-26T03:10:44.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>屏幕适配</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://jeanboy.cn/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
+    
+    
 </urlset>
