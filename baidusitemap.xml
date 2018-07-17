@@ -143,9 +143,9 @@
         
         <tag>Android</tag>
          
-        <tag>启动过程</tag>
-         
         <tag>源码分析</tag>
+         
+        <tag>启动过程</tag>
          
         <tag>Service</tag>
          
@@ -197,9 +197,9 @@
         
         <tag>Android</tag>
          
-        <tag>Activity</tag>
-         
         <tag>源码分析</tag>
+         
+        <tag>Activity</tag>
          
         <tag>Window</tag>
          
@@ -225,11 +225,11 @@
         
         <tag>Android</tag>
          
+        <tag>源码分析</tag>
+         
         <tag>Activity</tag>
          
         <tag>启动过程</tag>
-         
-        <tag>源码分析</tag>
          
          
            
@@ -349,11 +349,11 @@
         
         <tag>Android</tag>
          
-        <tag>源码分析</tag>
-         
         <tag>Binder</tag>
          
         <tag>进程间通信</tag>
+         
+        <tag>源码分析</tag>
          
          
            
