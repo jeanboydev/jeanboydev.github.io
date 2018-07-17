@@ -4,6 +4,34 @@
 
     
   <url>
+    <loc>http://jeanboy.cn/2018/07/17/android-pkms/</loc>
+    <lastmod>2018-07-17T02:46:00.330Z</lastmod>
+    <data>
+        <display>
+        <title>一篇文章看明白 Android PackageManagerService 工作流程</title>
+        <pubTime>2018-07-17T02:44:16.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>源码分析</tag>
+         
+        <tag>PackageMangerService</tag>
+         
+        <tag>PKMS</tag>
+         
+        <tag>工作流程</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://jeanboy.cn/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jeanboy.cn/2018/07/06/jvm-memory/</loc>
     <lastmod>2018-07-06T09:33:57.800Z</lastmod>
     <data>
