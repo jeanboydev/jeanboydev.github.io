@@ -79,8 +79,8 @@
       </categories>
       <tags>
         <tag>Android</tag>
-        <tag>源码分析</tag>
         <tag>启动过程</tag>
+        <tag>源码分析</tag>
         <tag>Service</tag>
       </tags>
   </entry>
@@ -109,9 +109,9 @@
       <tags>
         <tag>Android</tag>
         <tag>Activity</tag>
+        <tag>源码分析</tag>
         <tag>Window</tag>
         <tag>View</tag>
-        <tag>源码分析</tag>
       </tags>
   </entry>
   <entry>
@@ -124,8 +124,8 @@
       <tags>
         <tag>Android</tag>
         <tag>Activity</tag>
-        <tag>源码分析</tag>
         <tag>启动过程</tag>
+        <tag>源码分析</tag>
       </tags>
   </entry>
   <entry>
